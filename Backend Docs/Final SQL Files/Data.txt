@@ -1,0 +1,80 @@
+
+
+INSERT INTO EXPENDITURE(Entry_Number,Entry_Amount,Entry_Date,Entry_Month,Entry_Year) VALUES
+(202203008,1200,02,'July',2022);
+
+
+INSERT INTO Others
+(Entry_Number,Category)
+VALUES
+(202203008,'Shelf Maintenance');
+
+
+INSERT INTO EXPENDITURE(Entry_Number,Entry_Amount,Entry_Date,Entry_Month,Entry_Year) VALUES
+(202203001,6000,01,'January',2022);
+
+INSERT INTO Event_Expense
+(Entry_Number,Event_ID,Type,Sponsor_Name,Sponsor_Amount)
+VALUES
+(202203001,202202,'Decoration','MIST',6000);
+
+INSERT INTO EXPENDITURE(Entry_Number,Entry_Amount,Entry_Date,Entry_Month,Entry_Year) VALUES
+(202203003,8000,01,'June',2022); 
+
+INSERT INTO Event_Expense
+(Entry_Number,Event_ID,Type)
+VALUES
+(202203003,202201,'Books');
+
+INSERT INTO EXPENDITURE(Entry_Number,Entry_Amount,Entry_Date,Entry_Month,Entry_Year) VALUES
+(202203004,,10000,01,'June',2022); 
+INSERT INTO Event_Expense
+(Entry_Number,Event_ID,Sponsor_Name,Sponsor_Amount)
+VALUES
+(202203004,202203,'Dhaka Bookstore',10000);
+
+
+
+INSERT INTO EXPENDITURE(Entry_Number,Entry_Amount,Entry_Date,Entry_Month,Entry_Year) VALUES
+(202203002,5000,01,'January',2022); 
+INSERT INTO Event_Expense
+(Entry_Number,Event_ID,Sponsor_Name,Sponsor_Amount)
+VALUES
+(202203002,202202,'MIST Fund',5000);
+
+INSERT INTO EXPENDITURE(Entry_Number,Entry_Amount,Entry_Date,Entry_Month,Entry_Year) VALUES
+(202203006,2500,01,'January',2022); 
+INSERT INTO Books_Purchased
+(Entry_Number,Books_Quantity)
+VALUES
+(202203006,200);
+
+
+
+INSERT INTO Event
+(Event_ID,Event_Name,Event_Date)
+VALUES
+(202201,'Inaugration Ceremony',to_date('02.04.2022','DD.MM.YYYY'));
+
+INSERT INTO Event
+(Event_ID,Event_Name,Event_Date)
+VALUES
+(202202,'Book Reading Competition',to_date('02.06.2022','DD.MM.YYYY'));
+
+INSERT INTO Segment_Name
+(Event_ID,Segment)
+VALUES
+(202201,'Quiz');
+
+INSERT INTO Segment_Name
+(Event_ID,Segment)
+VALUES
+(202202,'Bangla Book Quiz');
+
+INSERT INTO Segment_Name
+(Event_ID,Segment)
+VALUES
+(202202,'English Book Quiz'); 
+
+
+

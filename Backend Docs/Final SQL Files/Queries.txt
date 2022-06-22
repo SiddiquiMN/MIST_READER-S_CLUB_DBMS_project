@@ -1,0 +1,34 @@
+
+1.Select *from Event_Expense join Event using (Event_ID)
+where Event_Name = 'Inaugration Ceremony' //display expense of a specific event
+
+2.Select Std_Name, Std_Department from Member // names of members from a specific dept
+
+3.select b.Isbn_no, Title, Publisher,  Genre, Edition, Donated_by,  Year,Due_date, Return_date
+from Books b inner join Book_author ba
+on b.Isbn_no=ba.Isbn_no; // Books of a specific author
+4.
+Select *from Event join Segment_Name using (Event_ID)
+
+where Event_Name='Book Reading Competition' //name of segments in a specific event
+
+
+5.Select Std_Name from (Volunteer join Fest_Volunteer using (Std_ID)) join Event using Event_ID where Event_Name = "" // list of volunteers at a event
+
+
+6.select Std_ID as "Student ID", Std_Name as "Student Name", Std_Department as "Department", Title, Due_Date,Return_Date
+from Student join Books using (Std_ID) //which book is currently with which student
+
+7.SELECT Title
+FROM Books
+WHERE Std_ID IS  NULL;  //currently available books
+
+8.Select Std_id as "Student ID",Std_name as "Student Name",Title,(return_date-due_date)*5 as "Fine" from Books join Student using (Std_id)
+where return_date-due_date>0; 
+
+
+
+
+
+
+
