@@ -9,7 +9,7 @@ CREATE TABLE Student
 
 CREATE TABLE Member
 (
-	Std_ID VARCHAR2(20)
+	Std_ID VARCHAR2(20),
 	Mem_DOB DATE,
 	Mem_Gender VARCHAR2(20),
 	Mem_Email VARCHAR2(40),
@@ -50,6 +50,13 @@ CREATE TABLE Volunteer
 
 V_Event_Duty VARCHAR2(40),
     FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
+);
+
+CREATE TABLE Event
+(
+	Event_ID NUMBER(6,0) PRIMARY KEY,
+	Event_Name VARCHAR2(40),
+	Event_Date DATE
 );
 
 CREATE TABLE Fest_Volunteer
@@ -117,6 +124,7 @@ Entry_Date NUMBER(2,0),
 Entry_Month VARCHAR(8),
 Entry_Year NUMBER(4,0)
 );
+
 CREATE TABLE Event_Expense
 (Entry_Number NUMBER(9,0) PRIMARY KEY,
  Event_ID NUMBER(6,0),
@@ -145,9 +153,19 @@ FOREIGN KEY(Entry_Number) REFERENCES Expenditure(Entry_Number) ON DELETE CASCADE
 
 create table Budget
 (
-    Month varchar2(30) primary key,
-    Year number(8,0) PRIMARY KEY,
+    Month varchar2(30), 
+    Year number(8,0),
     Total_spent number(10,0),
-    Present_amount number(10,0)
+    Present_amount number(10,0),
+	primary key(Month,Year)
 );
+
+create table Fund
+(
+    Fund_ID varchar2(30) PRIMARY KEY,
+	Amount NUMBER(10,2),
+	Source VARCHAR2(40),
+	Transaction_Date DATE
+);
+
 

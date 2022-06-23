@@ -30,7 +30,7 @@ INSERT INTO Books(Isbn_no,Std_ID,Title,Genre,Due_date,Return_date,Book_Edition,D
 
 
 
-INSERT INTO Participant(Std_ID,P_University_Name,P_ID,P_Photo,P_ID_Card_Photo) VALUES ('201914005','MIST','201914005',Null,Null);
+INSERT INTO Participant(Std_ID,P_University_Name,P_ID,P_Photo,P_ID_Card_Photo) VALUES ('201914005','MIST','201914005',Null,Null); //bisoy ta nia vabte hbe!!
 INSERT INTO Participant(Std_ID,P_University_Name,P_ID,P_Photo,P_ID_Card_Photo) VALUES ('202014006','MIST','202014006',Null,Null);
 INSERT INTO Participant(Std_ID,P_University_Name,P_ID,P_Photo,P_ID_Card_Photo) VALUES ('202015060','MIST','202015060',Null,Null);
 
