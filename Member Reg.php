@@ -79,61 +79,61 @@
 
   <main id="main" style="margin-top: 157px;">
 
-    <form action="">
+    <form method="post" action="form.php">
       
       <div class="row">
             <h1 style="text-align: center; color: blanchedalmond; margin-bottom: 34px !important;">Member Registration Form</h1>
             <div class="col">
-                <input type="number" class="form-control" placeholder="ID" aria-label="ID">
+                <input type="number" name="ID"class="form-control" placeholder="ID" aria-label="ID">
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+                <input type="text" name="Name"class="form-control" placeholder="Name" aria-label="Name">
             </div>
         </div>
         <br> <br>
         <div class="row">
             <div class="col">
-                <input type="text" class="form-control" placeholder="Department" aria-label="Department">
+                <input type="text" name="Department"class="form-control" placeholder="Department" aria-label="Department">
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Level" aria-label="Level">
-            </div>
-        </div>
-
-        <br> <br>
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Gender" aria-label="Gender">
-            </div>
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Date of Birth" aria-label="Date of Birth">
+                <input type="text" name="Level"class="form-control" placeholder="Level" aria-label="Level">
             </div>
         </div>
 
         <br> <br>
         <div class="row">
             <div class="col">
-                <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                <input type="text" name="Gender" class="form-control" placeholder="Gender" aria-label="Gender">
             </div>
             <div class="col">
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                <input type="date" name="DOB"class="form-control" placeholder="Date of Birth" aria-label="Date of Birth">
             </div>
         </div>
 
         <br> <br>
         <div class="row">
             <div class="col">
-                <input type="password" class="form-control" placeholder="Password" aria-label="Password">
+                <input type="email" name="Email" class="form-control" placeholder="Email" aria-label="Email">
             </div>
             <div class="col">
-                <input type="number" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+                <input type="text" name="Username"class="form-control" placeholder="Username" aria-label="Username">
+            </div>
+        </div>
+
+        <br> <br>
+        <div class="row">
+            <div class="col">
+                <input type="password" name="Password"class="form-control" placeholder="Password" aria-label="Password">
+            </div>
+            <div class="col">
+                <input type="number" name="Phone"class="form-control" placeholder="Phone Number" aria-label="Phone Number">
             </div>
         </div>
 
         <br> <br>
 
         <div class="row1">
-            <button class="button1" type="submit" class="btn btn-primary">Submit</button>
+            <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
         </div>
 
     </form>  
