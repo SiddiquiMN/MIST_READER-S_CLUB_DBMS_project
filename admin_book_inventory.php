@@ -58,7 +58,7 @@
           
           <li><a class="nav-link scrollto" href="Books.php">Add Books</a></li>
           <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
-          <li><a class="nav-link scrollto" href="Member Reg.php">Add Student</a></li>
+         
           <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
           <li><a class="nav-link scrollto" href="#">Expenditure & Fund</a></li>
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->

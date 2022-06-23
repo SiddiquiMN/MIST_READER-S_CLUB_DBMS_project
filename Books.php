@@ -58,7 +58,7 @@
           
           <li><a class="nav-link scrollto" href="Books.php">Add Books</a></li>
           <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
-          <li><a class="nav-link scrollto" href="Member Reg.php">Add Student</a></li>
+          <!--<li><a class="nav-link scrollto" href="Member Reg.php">Add Student</a></li> -->
           <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
           <li><a class="nav-link scrollto" href="#">Expenditure & Fund</a></li>
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
@@ -80,63 +80,55 @@
  
 
   <main id="main" style="margin-top: 157px;">
-
+  <form method="post" action="book_form.php">
     <div class="row">
         <h1 style="text-align: center; color: blanchedalmond; margin-bottom: 34px !important;">Books information</h1>
         <div class="col">
-            <input type="number" class="form-control" placeholder="ISBN No." aria-label="ISBN No.">
+            <input type="number" name="ISBN_no" class="form-control" placeholder="ISBN No." aria-label="ISBN No.">
         </div>
         <div class="col">
-            <input type="text" class="form-control" placeholder="Book Title" aria-label="Book Title">
+            <input type="text" name="Title"class="form-control" placeholder="Book Title" aria-label="Book Title">
         </div>
     </div>
     <br> <br>
 
     <div class="row">
         <div class="col">
-            <input type="text" class="form-control" placeholder="Genre" aria-label="Genre">
+            <input type="text" name="Genre"class="form-control" placeholder="Genre" aria-label="Genre">
         </div>
         <div class="col">
-            <input type="text" class="form-control" placeholder="Publications" aria-label="Publications">
+            <input type="text" name="Publications"class="form-control" placeholder="Publications" aria-label="Publications">
         </div>
     </div>
 
     <br> <br>
     <div class="row">
+      
         <div class="col">
-            <input type="text" class="form-control" placeholder="Published Year" aria-label="Published Year">
+            <input type="text" name="Edition"class="form-control" placeholder="Edition" aria-label="Edition">
+
         </div>
         <div class="col">
-            <input type="text" class="form-control" placeholder="Edition" aria-label="Edition">
+            <input type="text" name="Donated_By"class="form-control" placeholder="Donated By" aria-label="Donated By">
         </div>
     </div>
 
-    <br> <br>
-    <div class="row">
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Donated By" aria-label="Donated By">
-        </div>
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Return Date" aria-label="Return Date">
-        </div>
-    </div>
+    
 
     <br><br>
 
     <div class="row">
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Due Date" aria-label="Due Date">
-        </div>
-        <div class="col">
-            <input type="text" class="form-control" placeholder="Fine" aria-label="Fine">
-        </div>
+      
+        
     </div>
 
     <br> <br>
 
     <div class="row1">
-        <button class="button1" type="submit" class="btn btn-primary">Submit</button>
+        <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
     </div>
+</form>
+
 
 
         
