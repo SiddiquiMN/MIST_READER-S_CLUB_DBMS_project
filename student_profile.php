@@ -1,38 +1,3 @@
-<?php 
-/*
-$usermsg="";
-$passmsg="";
-$msg="";
-
-$adusermsg="";
-$adpassmsg="";
-
-if(!empty($_REQUEST['adusermsg'])){
-  $adusermsg=$_REQUEST['adusermsg'];
-}
-
-if(!empty($_REQUEST['adpassmsg'])){
-  $adpassmsg=$_REQUEST['adpassmsg'];
-}
-
-if(!empty($_REQUEST['usermsg'])){
-  $usermsg=$_REQUEST['usermsg'];
-}
-
-if(!empty($_REQUEST['passmsg'])){
-  $passmsg=$_REQUEST['passmsg'];
-}
-
-if(!empty($_REQUEST['msg'])){
-  $msg=$_REQUEST['msg'];
-}
-*/
-
-?>
-
-
-
-
 <!DOCTYPE php>
 <php lang="en">
 
@@ -86,21 +51,14 @@ if(!empty($_REQUEST['msg'])){
         <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
     
-
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
-          <li><a class="nav-link scrollto" href="Member Reg.php">Member Registration</a></li>
-          <li><a class="nav-link scrollto" href="panel_member.php">Panel Members</a></li>
-          <li><a class="nav-link scrollto " href="Event.php">Events</a></li>
-          <li><a class="nav-link scrollto" href="Gallery.php">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="Contact.php">Contact</a></li>
-          <li><a class="nav-link scrollto" href="About.php">About</a></li>
-          <li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="Admin.php">Admin Log In</a></li>
-              <li><a href="Student.php">Student Log In</a></li>
-            </ul>
+          <li><a class="nav-link scrollto active" href="student_index.php">Welcome</a></li>
+          
+          <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
+          <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
+          <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
+          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -114,34 +72,10 @@ if(!empty($_REQUEST['msg'])){
 
   <main id="main" style="margin-top: 157px;">
 
-      <form action="loginadmin_server_pg.php" method="get"> 
-        <div class="row2 shukor">
-            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Admin Log In</h1>
-            <div class="col" >
-                <p style="color: black; text-align: center;">Username</p>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                  <br>
-            </div>
-           <!-- <label style="color:red;">*<?php echo $adusermsg ?></label>-->
-        
-          
-            <div class="col">
-              <p style="color: black; text-align: center;">Password</p>
-                <input type="password" class="form-control" placeholder="password" aria-label="password">
-            </div>
-          <!--<label style="color:red;">*<?php echo $adpassmsg ?></label>-->
-        </div>
-          <br> <br>
-      
-          <div class="row1">
-              <button class="button1" type="submit" class="btn btn-primary">Sign In</button>
-          </div>
-        </form> 
-
-        
+    <p>Student profile page</p>
 
   </main>
-
+    <br> <br> <br> <br> <br> <br>
   <!-- ======= Footer ======= -->
  <footer id="footer">
     <div class="container">

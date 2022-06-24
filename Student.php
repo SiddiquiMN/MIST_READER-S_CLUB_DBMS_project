@@ -1,3 +1,6 @@
+
+<!-- ei page ta hosse Student er login page. Ekhane log in korle pore student er index page tate jabe. -->
+
 <!DOCTYPE php>
 <php lang="en">
 
@@ -79,6 +82,7 @@
 
   <main id="main" style="margin-top: 157px;">
 
+  <form action="loginstudent_server_pg.php" method="get"> 
     <div class="row2 shukor">
         <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Student Log In</h1>
         <div class="col" >
@@ -86,12 +90,14 @@
               <input type="text" class="form-control" placeholder="Username" aria-label="Username">
               <br>
         </div>
+         <!-- <label style="color:red;">*<?php echo $stuusermsg ?></label>-->
     
       
-      <div class="col">
-          <p style="color: black; text-align: center;">Password</p>
-            <input type="password" class="form-control" placeholder="password" aria-label="password">
-      </div>
+        <div class="col">
+            <p style="color: black; text-align: center;">Password</p>
+              <input type="password" class="form-control" placeholder="password" aria-label="password">
+        </div>
+      <!--<label style="color:red;">*<?php echo $stupassmsg ?></label>-->
     </div>
       <br> <br>
   
@@ -100,7 +106,7 @@
         <button class="button1" type="submit" class="btn btn-primary">Sign In</button>
         <p style="margin: 20px; color:black">Don't have any account ? <u><a href="Member Reg.php" style="color:yellow">Sign Up</a></u></p>
     </div>
-
+  </form>
 
   </main>
 
