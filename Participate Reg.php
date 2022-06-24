@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -80,7 +80,7 @@
   <main id="main" style="margin-top: 157px;">
 
     <div class="row">
-        <h1 style="text-align: center; color: blanchedalmond; margin-bottom: 34px !important;">Participate Registration Form</h1>
+        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Participate Registration Form</h1>
         <div class="col">
             <input type="number" class="form-control" placeholder="ID" aria-label="ID">
         </div>
@@ -112,12 +112,12 @@
 <br> <br>
     <div class="row">
         <div class="col">
-          <p style="color: aliceblue; text-align: center;">Student Image</p>
+          <p style="color: black; text-align: center;">Student Image</p>
             <input type="file" class="form-control" placeholder="Student image" aria-label="Student image">
             <div class="invalid-feedback">Example invalid form file feedback</div>
         </div>  
         <div class="col">
-          <p style="color:aliceblue; text-align: center;">University ID card Image</p>  
+          <p style="color:black; text-align: center;">University ID card Image</p>  
           <input type="file" class="form-control" placeholder="Univesity ID card Image" aria-label="University ID card Image">
           <div class="invalid-feedback">Example invalid form file feedback</div>
         </div>

@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -83,7 +83,7 @@
         <div class="container">
 
         <div class="section-title">
-            <p style="color: rgb(224, 246, 26);text-align: center;">MIST READER'S CLUB</p> <br>
+            <p style="color: rgb(238, 242, 240);text-align: center;">MIST READER'S CLUB</p> <br>
             <h6 style="color: aliceblue;">This is MIST Readers Club. The vision of this club is to spread the spirit of reading books among the students and bring the readers under one roof.</h6>
             
         </div>

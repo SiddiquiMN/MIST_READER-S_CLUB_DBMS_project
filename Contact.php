@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -84,7 +84,7 @@
 
         <div class="section-title">
             <h2 style="color: white;">Contact</h2>
-            <p style="color: rgb(224, 246, 26);">For any queries feel free to ask here. The team is ready to help you.</p> <br>
+            <p style="color: black;">For any queries feel free to ask here. The team is ready to help you.</p> <br>
             <a href="https://www.google.com/maps/place/%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A6%BF%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A6%BF+%E0%A6%87%E0%A6%A8%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%9F%E0%A6%BF%E0%A6%89%E0%A6%9F+%E0%A6%85%E0%A6%AC+%E0%A6%B8%E0%A6%BE%E0%A7%9F%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%B8+%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1+%E0%A6%9F%E0%A7%87%E0%A6%95%E0%A6%A8%E0%A7%8B%E0%A6%B2%E0%A6%9C%E0%A6%BF+(%E0%A6%8F%E0%A6%AE%E0%A6%86%E0%A6%87%E0%A6%8F%E0%A6%B8%E0%A6%9F%E0%A6%BF)/@23.8377201,90.3578917,15z/data=!4m2!3m1!1s0x0:0x7a2bb9d68ea2166e?sa=X&ved=2ahUKEwicqO37l6r4AhWExDgGHcZ8DrEQ_BJ6BAhWEAU" style="color: white;"> <img style="height: 300px; width: 500px;" src="assets/img/mist.jpg" alt="mist location"> <br><u>Click here</u></a>
             
         </div>

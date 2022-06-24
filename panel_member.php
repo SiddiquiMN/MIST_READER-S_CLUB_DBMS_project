@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -84,7 +84,7 @@
 
             <div class="section-title">
                 <p style="color: rgb(224, 246, 26);text-align: center;">MIST READER'S CLUB</p> <br>
-                <h4 style="color: blanchedalmond; text-align:center">Panel Members of 2022</h4>
+                <h4 style="color: black; text-align:center">Panel Members of 2022</h4>
             </div>
 
             <div class="p_member_list">
@@ -92,7 +92,7 @@
                     <div class="col">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
                     </div>
-                    <div class="col" style="margin-top: 70px; color:blanchedalmond">
+                    <div class="col" style="margin-top: 70px; color:black">
                         <p>Name: </p>
                     <p>Department: </p>
                     <p>Designation: </p>
@@ -104,20 +104,7 @@
                     <div class="col">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
                     </div>
-                    <div class="col" style="margin-top: 70px; color:blanchedalmond">
-                        <p>Name: </p>
-                    <p>Department: </p>
-                    <p>Designation: </p>
-                    </div>
-                </div>
-
-                <br><br>
-
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                    </div>
-                    <div class="col" style="margin-top: 70px; color:blanchedalmond">
+                    <div class="col" style="margin-top: 70px; color:black">
                         <p>Name: </p>
                     <p>Department: </p>
                     <p>Designation: </p>
@@ -130,7 +117,20 @@
                     <div class="col">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
                     </div>
-                    <div class="col" style="margin-top: 70px; color:blanchedalmond">
+                    <div class="col" style="margin-top: 70px; color:black">
+                        <p>Name: </p>
+                    <p>Department: </p>
+                    <p>Designation: </p>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
+                    </div>
+                    <div class="col" style="margin-top: 70px; color:black">
                         <p>Name: </p>
                     <p>Department: </p>
                     <p>Designation: </p>

@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -80,16 +80,16 @@
   <main id="main" style="margin-top: 157px;">
 
     <div class="row2 shukor">
-        <h1 style="text-align: center; color: blanchedalmond; margin-bottom: 34px !important;">Student Log In</h1>
+        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Student Log In</h1>
         <div class="col" >
-            <p style="color: aliceblue; text-align: center;">Username</p>
+            <p style="color: black; text-align: center;">Username</p>
               <input type="text" class="form-control" placeholder="Username" aria-label="Username">
               <br>
         </div>
     
       
       <div class="col">
-          <p style="color: aliceblue; text-align: center;">Password</p>
+          <p style="color: black; text-align: center;">Password</p>
             <input type="password" class="form-control" placeholder="password" aria-label="password">
       </div>
     </div>
@@ -98,7 +98,7 @@
 
     <div class="row1">
         <button class="button1" type="submit" class="btn btn-primary">Sign In</button>
-        <p style="margin: 20px;">Don't have any account? <u><a href="Member Reg.php">Sign Up</a></u></p>
+        <p style="margin: 20px; color:black">Don't have any account ? <u><a href="Member Reg.php" style="color:yellow">Sign Up</a></u></p>
     </div>
 
 

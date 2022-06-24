@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -55,7 +55,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Registrations</span> <i class="bi bi-chevron-down"></i></a>
+          <!--<li class="dropdown"><a href="#"><span>Registrations</span> <i class="bi bi-chevron-down"></i></a>-->
             <ul>
               <!--<li><a href="#"></a></li>
                 <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -69,7 +69,7 @@
               </li>-->
               <li><a href="Member Reg.php">Member Registration</a></li>
               <!--<li><a href="Volunteer Reg.php">Volunteer Registration</a></li>-->
-              <li><a href="Participate Reg.php">Participate Registration</a></li>
+              <!--<li><a href="Participate Reg.php">Participate Registration</a></li>-->
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="panel_member.php">Panel Members</a></li>
@@ -96,7 +96,7 @@
   <main id="main" style="margin-top: 157px;">
 
     <div class="row">
-        <h1 style="text-align: center; color: blanchedalmond; margin-bottom: 34px !important;">Volunteer Registration Form</h1>
+        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Volunteer Registration Form</h1>
         <div class="col">
             <input type="number" class="form-control" placeholder="ID" aria-label="ID">
         </div>

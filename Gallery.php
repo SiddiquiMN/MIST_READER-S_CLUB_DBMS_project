@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0" Text="viewport">
 
   <title>MIST READER'S CLUB</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="" Text="description">
+  <meta content="" Text="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -25,13 +25,13 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: Selecao - v4.7.0
+  * Template Text: Selecao - v4.7.0
   * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
@@ -84,54 +84,54 @@
 
             <div class="section-title">
                 <p style="color: rgb(224, 246, 26);text-align: center;">MIST READER'S CLUB</p> <br>
-                <h4 style="color: blanchedalmond; text-align:center">Panel Members of 2022</h4>
+                <h4 style="color: black; text-align:center">Photos of MRC events 2022</h4>
             </div>
 
             <div class="photo_case">
                 <div class="row" style="text-align: center;">
-                    <div class="col" style="color: blanchedalmond; ">
+                    <div class="col" style="color: black; ">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                        <p>Name: </p>
+                        <p>Text: </p>
                     </div>
-                    <div class="col" style="color:blanchedalmond">
+                    <div class="col" style="color:black">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                        <p>Name: </p>
-                    </div>
-                </div>
-                <br><br>
-
-                <div class="row" style="text-align: center;">
-                    <div class="col" style="color: blanchedalmond; ">
-                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                        <p>Name: </p>
-                    </div>
-                    <div class="col" style="color:blanchedalmond">
-                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                        <p>Name: </p>
+                        <p>Text: </p>
                     </div>
                 </div>
                 <br><br>
 
                 <div class="row" style="text-align: center;">
-                    <div class="col" style="color: blanchedalmond; ">
+                    <div class="col" style="color: black; ">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                        <p>Name: </p>
+                        <p>Text: </p>
                     </div>
-                    <div class="col" style="color:blanchedalmond">
+                    <div class="col" style="color:black">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                        <p>Name: </p>
+                        <p>Text: </p>
                     </div>
                 </div>
                 <br><br>
 
                 <div class="row" style="text-align: center;">
-                    <div class="col" style="color: blanchedalmond; ">
+                    <div class="col" style="color: black; ">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                        <p>Name: </p>
+                        <p>Text: </p>
                     </div>
-                    <div class="col" style="color:blanchedalmond">
+                    <div class="col" style="color:black">
                         <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                        <p>Name: </p>
+                        <p>Text: </p>
+                    </div>
+                </div>
+                <br><br>
+
+                <div class="row" style="text-align: center;">
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
+                        <p>Text: </p>
+                    </div>
+                    <div class="col" style="color:black">
+                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
+                        <p>Text: </p>
                     </div>
                 </div>
                 <br><br>

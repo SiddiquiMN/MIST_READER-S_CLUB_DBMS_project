@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -82,7 +82,7 @@
   <main id="main" style="margin-top: 157px;">
   <form method="post" action="book_form.php">
     <div class="row">
-        <h1 style="text-align: center; color: blanchedalmond; margin-bottom: 34px !important;">Books information</h1>
+        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Books information</h1>
         <div class="col">
             <input type="number" name="ISBN_no" class="form-control" placeholder="ISBN No." aria-label="ISBN No.">
         </div>
