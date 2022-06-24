@@ -112,7 +112,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">MIST CSE DEPARTMENT</a>
+        Designed by <a href="#">MIST CSE DEPARTMENT</a>
       <!--</div>
     </div>
   </footer><!-- End Footer -->

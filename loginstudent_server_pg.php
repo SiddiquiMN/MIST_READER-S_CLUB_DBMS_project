@@ -17,7 +17,7 @@ if($username==NULL || $password==NULL){
         $passmsg="Blank Password";
     }
 
-    header("Location: student_index.php?adusermsg=$usermsg&adpassmsg=$passmsg");
+    header("Location: student_index.php?stuusermsg=$usermsg&stupassmsg=$passmsg");
 }
 
 elseif($username==NULL && $password==NULL){

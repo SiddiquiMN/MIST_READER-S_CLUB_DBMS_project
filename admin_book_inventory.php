@@ -79,57 +79,50 @@
  
 
   <main id="main" style="margin-top: 157px;">
-      <!--<div class="event_info">
-        <h1>No events so far</h1>
-        <br> <br>
-        <h5>Want be a Volunteer in this upcomoing event?</h5>
-        <h6><a href="Volunteer Reg.php"><u style="color: gold;"><i>Sign Up Here</i></u></a></h6>
-    </div>-->
-    <table border="4px" style="align-items:center;">
-	<tr align="center">
-		<th>Book Title</th> 
-   
-  </tr>
+  <br>
+  <h2 style="color:aliceblue; text-align:center;">Book Inventory Details</h2>
+  <br>
 
-    <?php
+  <table class="table">
+      <thead>
+        <tr align="center">
+          <th scope="col">Book Title</th>   
+        </tr>
+      </thead>
+    <tbody class="table-group-divider">
+      
+        <?php
 
-// Connects to the XE service (i.e. database) on the "localhost" machine
-
-
-/* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
-/* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
-
-$conn = oci_connect("DBMS_PROJECT","1234","localhost/XE");
-if (!$conn) {
-    $e = oci_error();
-    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-}
-
-$stid = oci_parse($conn, 'SELECT Title FROM Books WHERE Std_ID IS  NULL');
-oci_execute($stid);
+          // Connects to the XE service (i.e. database) on the "localhost" machine
 
 
-while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-    echo "<tr align='center'>\n";
-    foreach ($row as $item) {
-        echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-    }
-    echo "</tr>\n";
-}
+          /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
+          /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
 
-?>
+          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE");
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
 
-</table> 
-
-    <!--<div class="event_info">
-        <h1>No events so far</h1>
-        <br> <br>
-        <h5>Want be a Volunteer in this upcomoing event?</h5>
-        <h6><a href="Volunteer Reg.php"><u style="color: gold;"><i>Sign Up Here</i></u></a></h6>
-    </div>-->
+          $stid = oci_parse($conn, 'SELECT Title FROM Books WHERE Std_ID IS  NULL');
+          oci_execute($stid);
 
 
-        
+          while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
+
+        ?>
+
+
+    </tbody>
+  </table>
+  <br>
 
   </main>
 
@@ -153,7 +146,7 @@ while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">MIST CSE DEPARTMENT</a>
+        Designed by <a href="#">MIST CSE DEPARTMENT</a>
       <!--</div>
     </div>
   </footer><!-- End Footer -->

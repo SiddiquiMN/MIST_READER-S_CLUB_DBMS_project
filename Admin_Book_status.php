@@ -76,88 +76,90 @@
 
   
 
- 
-
-  <main id="main" style="margin-top: 157px;">
-
-    <!--<div class="event_info">
-        <h1>No events so far</h1>
-        <br> <br>
-        <h5>Want be a Volunteer in this upcomoing event?</h5>
-        <h6><a href="Volunteer Reg.php"><u style="color: gold;"><i>Sign Up Here</i></u></a></h6>
-    </div>-->
-    <table border="4px" style="align-items:center;">
-	<tr align="center">
-		<th>Student ID</th> 
-    <th>Name</th>
-
-		<th>Department</th>
-
-		<th>Book</th>
- 
-    <th>Due  Date</th>
-
-    <th>Return Date</th>  
-  </tr>
-
+<main id="main" style="margin-top: 157px;">
+  <h2 style="color:azure; text-align:center;">Book Status Table</h2>
+  <br>
+  <table class="table">
+    <thead>
+      <tr align="center">
+        <th scope="col">Student ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Book</th>
+        <th scope="col">Due  Date</th>
+        <th scope="col">Return Date</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    
+    
     <?php
 
-// Connects to the XE service (i.e. database) on the "localhost" machine
+  // Connects to the XE service (i.e. database) on the "localhost" machine
 
 
-/* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
+  /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
 
-$conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
-if (!$conn) {
-    $e = oci_error();
-    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-}
+        $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+        if (!$conn) {
+            $e = oci_error();
+            trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+        }
 
-$stid = oci_parse($conn, 'select Std_ID as "Student ID", Std_Name as "Student Name", Std_Department as "Department", Title, Due_Date,Return_Date
-from Student join Books using (Std_ID)');
-oci_execute($stid);
-
-
-while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-    echo "<tr align='center'>\n";
-    foreach ($row as $item) {
-        echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-    }
-    echo "</tr>\n";
-}
-
-?>
-
-</table> 
-<br>
-<table border="4px" cellspacing="50">
-	<tr align="center">
-		<th>Student ID</th> 
-    <th>Name</th>
+        $stid = oci_parse($conn, 'select Std_ID as "Student ID", Std_Name as "Student Name", Std_Department as "Department", Title, Due_Date,Return_Date
+        from Student join Books using (Std_ID)');
+        oci_execute($stid);
 
 
-		<th>Book</th>
- 
-    <th>Fine</th>  
-  </tr> 
-<?php
-$sti = oci_parse($conn, 'Select Std_id as "Student ID",Std_name as "Student Name",Title,(return_date-due_date)*5 as "Fine" from Books join Student using (Std_id)
-where return_date-due_date>0');
-oci_execute($sti);
+        while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+            echo "<tr align='center'>\n";
+            foreach ($row as $item) {
+                echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+            }
+            echo "</tr>\n";
+        }
+
+      ?>
+    
+    </tbody>
+</table>
 
 
-while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
-    echo "<tr align='center'>\n";
-    foreach ($row as $item) {
-        echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-    }
-    echo "</tr>\n";
-}
+<br><br>
 
-?>
-  </table>      
+    <h2 style="color:azure; text-align:center;">Student with Fine Table</h2>
+    <br>
+    <table class="table">
+      <thead>
+        <tr align="center">
+          <th scope="col">Student ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Book</th>
+          <th scope="col">Fine</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
 
-  </main>
+        <?php
+              $sti = oci_parse($conn, 'Select Std_id as "Student ID",Std_name as "Student Name",Title,(return_date-due_date)*5 as "Fine" from Books join Student using (Std_id)
+              where return_date-due_date>0');
+              oci_execute($sti);
+
+
+              while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
+                  echo "<tr align='center'>\n";
+                  foreach ($row as $item) {
+                      echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                  }
+                  echo "</tr>\n";
+              }
+
+            ?>
+      </tbody>
+    </table>
+    <br>
+
+</main>
 
   <!-- ======= Footer ======= -->
  <footer id="footer">
