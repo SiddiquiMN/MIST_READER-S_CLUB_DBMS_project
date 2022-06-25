@@ -1,3 +1,5 @@
+<!--Connected with books.php page. 
+ data stores into Books table of oracle-->
 
 <?php
 $conn=oci_connect("DBMS_PROJECT","1234","localhost/XE");

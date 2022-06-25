@@ -95,6 +95,7 @@
 
   <main id="main" style="margin-top: 157px;">
 
+  <form method="post" action="">
     <div class="row">
         <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Volunteer Registration Form</h1>
         <div class="col">
@@ -123,11 +124,11 @@
         <div class="col">
             <!--<input type="text" class="form-control" placeholder="Event Duty" aria-label="Event Duty">-->
             <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-            <select class="form-select" id="autoSizingSelect" aria-placeholder="" >
-            <option selected>Event Duty</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <select class="form-select" id="autoSizingSelect" arial-placeholder="Event Duty" >
+              <option value="1">Management</option>
+              <option value="2">Organizing</option>
+              <option value="3">Logistics</option>
+              <option value="4">Food & Others</option>
             </select>
         </div>
     </div>
@@ -138,7 +139,7 @@
         <button class="button1" type="submit" class="btn btn-primary">Submit</button>
     </div>
 
-
+  </form>
         
 
   </main>

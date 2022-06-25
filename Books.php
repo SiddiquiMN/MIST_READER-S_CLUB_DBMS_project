@@ -1,3 +1,8 @@
+<!--data insert connected with book_form.php page. 
+ data stores into Books table of oracle-->
+
+ <!-- admin end er page eta-->
+
 <!DOCTYPE php>
 <php lang="en">
 

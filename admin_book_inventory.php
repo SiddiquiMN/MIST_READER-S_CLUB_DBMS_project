@@ -1,3 +1,6 @@
+ <!-- admin end er page eta-->
+ <!-- database theke data view hosse ei page e-->
+
 <!DOCTYPE php>
 <php lang="en">
 
