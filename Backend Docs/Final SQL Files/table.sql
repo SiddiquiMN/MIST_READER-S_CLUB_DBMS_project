@@ -169,3 +169,16 @@ create table Fund
 );
 
 
+CREATE TABLE ISSUE_DEMAND
+(
+	Std_Name VARCHAR2(40),
+	Std_ID VARCHAR2(20) ,
+	Isbn_no varchar2(30) ,
+	 Title varchar2(40),
+Primary key(Std_ID,Isbn_no),
+	foreign key(Isbn_no) References Books(Isbn_no)ON DELETE CASCADE,
+	 FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
+);
+
+
+
