@@ -1,7 +1,5 @@
-<!--data insert connected with book_form.php page. 
- data stores into Books table of oracle-->
 
- <!-- admin end er page eta-->
+<!--admin login er por ei page dekhte parbe -->
 
 <!DOCTYPE php>
 <php lang="en">
@@ -56,14 +54,13 @@
         <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
     
-
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="admin_index.php">Admin</a></li>
           
           <li><a class="nav-link scrollto" href="Books.php">Add Books</a></li>
           <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
-          <!--<li><a class="nav-link scrollto" href="Member Reg.php">Add Student</a></li> -->
+         
           <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
           <li><a class="nav-link scrollto" href="admin_expenditure & fund.php">Expenditure & Fund</a></li>
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
@@ -85,61 +82,11 @@
  
 
   <main id="main" style="margin-top: 157px;">
-  <form method="post" action="book_form.php">
-    <div class="row">
-        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Books information</h1>
-        <div class="col">
-            <input type="number" name="ISBN_no" class="form-control" placeholder="ISBN No." aria-label="ISBN No.">
-        </div>
-        <div class="col">
-            <input type="text" name="Title"class="form-control" placeholder="Book Title" aria-label="Book Title">
-        </div>
-    </div>
-    <br> <br>
 
-    <div class="row">
-        <div class="col">
-            <input type="text" name="Genre"class="form-control" placeholder="Genre" aria-label="Genre">
-        </div>
-        <div class="col">
-            <input type="text" name="Publications"class="form-control" placeholder="Publications" aria-label="Publications">
-        </div>
-    </div>
-
-    <br> <br>
-    <div class="row">
-      
-        <div class="col">
-            <input type="text" name="Edition"class="form-control" placeholder="Edition" aria-label="Edition">
-
-        </div>
-        <div class="col">
-            <input type="text" name="Donated_By"class="form-control" placeholder="Donated By" aria-label="Donated By">
-        </div>
-    </div>
-
-    
-
-    <br><br>
-
-    <div class="row">
-      
-        
-    </div>
-
-    <br> <br>
-
-    <div class="row1">
-        <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
-
-
-
-        
+    <p>Expenditure & Fund Page</p>
 
   </main>
-
+    <br> <br> <br> <br> <br> <br>
   <!-- ======= Footer ======= -->
  <footer id="footer">
     <div class="container">

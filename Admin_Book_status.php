@@ -63,7 +63,7 @@
           <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
       
           <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
-          <li><a class="nav-link scrollto" href="#">Expenditure & Fund</a></li>
+          <li><a class="nav-link scrollto" href="admin_expenditure & fund.php">Expenditure & Fund</a></li>
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
           <li><a class="nav-link scrollto" href="#">Log Out</a></li>
           <!--<li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
@@ -78,10 +78,10 @@
     </div>
   </header><!-- End Header -->
 
-  
+  <!--Book status table-->
 
 <main id="main" style="margin-top: 157px;">
-  <h2 style="color:azure; text-align:center;">Book Status Table</h2>
+  <h2 style="color:azure; text-align:center;"><b>Book Status</b></h2>
   <br>
   <table class="table">
     <thead>
@@ -131,7 +131,9 @@
 
 <br><br>
 
-    <h2 style="color:azure; text-align:center;">Student with Fine Table</h2>
+<!-- Student with fine Details Table-->
+
+    <h2 style="color:azure; text-align:center;"><b>Student with Fine</b></h2>
     <br>
     <table class="table">
       <thead>
@@ -147,6 +149,43 @@
         <?php
               $sti = oci_parse($conn, 'Select Std_id as "Student ID",Std_name as "Student Name",Title,(return_date-due_date)*5 as "Fine" from Books join Student using (Std_id)
               where return_date-due_date>0');
+              oci_execute($sti);
+
+
+              while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
+                  echo "<tr align='center'>\n";
+                  foreach ($row as $item) {
+                      echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                  }
+                  echo "</tr>\n";
+              }
+
+            ?>
+      </tbody>
+    </table>
+    <br>
+
+    <br><br>
+
+ <!-- Student with books they demanded table-->   
+
+    <h2 style="color:azure; text-align:center;"><b>Demanded Books by the Student</b></h2>
+    <br>
+    <table class="table">
+      <thead>
+        <tr align="center">
+          <th scope="col">Student ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Level</th>
+          <th scope="col">ISBN NO.</th>
+          <th scope="col">Book Title</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+        <?php
+              $sti = oci_parse($conn, 'Select * from ISSUE_DEMAND');
               oci_execute($sti);
 
 

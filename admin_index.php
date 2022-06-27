@@ -63,7 +63,7 @@
           <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
          
           <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
-          <li><a class="nav-link scrollto" href="#">Expenditure & Fund</a></li>
+          <li><a class="nav-link scrollto" href="admin_expenditure & fund.php">Expenditure & Fund</a></li>
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
           <li><a class="nav-link scrollto" href="#">Log Out</a></li>
           <!--<li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>

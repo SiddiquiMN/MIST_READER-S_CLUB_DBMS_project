@@ -48,7 +48,7 @@ CREATE TABLE Volunteer
 
 	Std_ID VARCHAR2(20),
 
-V_Event_Duty VARCHAR2(40),
+	V_Event_Duty VARCHAR2(40),
     FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
 );
 
@@ -171,13 +171,13 @@ create table Fund
 
 CREATE TABLE ISSUE_DEMAND
 (
-	Std_Name VARCHAR2(40),
 	Std_ID VARCHAR2(20) ,
+	Std_Name VARCHAR2(40),
 	Std_Department VARCHAR2(20),
 	Std_Level NUMBER,
 	Isbn_no varchar2(30) ,
 	Book_Title varchar2(80),
-Primary key(Std_ID,Isbn_no),
+	Primary key(Std_ID,Isbn_no),
 	foreign key(Isbn_no) References Books(Isbn_no)ON DELETE CASCADE,
 	 FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
 );
