@@ -79,23 +79,23 @@
 
   <main id="main" style="margin-top: 157px;">
 
-    <form method="post" action="">
+    <form method="post" action="Participant.php">
       <div class="row">
           <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Participate Registration Form</h1>
           <div class="col">
-              <input type="number" class="form-control" placeholder="ID" aria-label="ID">
+              <input type="number" name="ID" class="form-control" placeholder="ID" aria-label="ID">
           </div>
           <div class="col">
-              <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+              <input type="text"name="Name" class="form-control" placeholder="Name" aria-label="Name">
           </div>
       </div>
       <br> <br>
       <div class="row">
           <div class="col">
-              <input type="text" class="form-control" placeholder="Department" aria-label="Department">
+              <input type="text" name="Department" class="form-control" placeholder="Department" aria-label="Department">
           </div>
           <div class="col">
-              <input type="text" class="form-control" placeholder="Level" aria-label="Level">
+              <input type="text" name="Level" class="form-control" placeholder="Level" aria-label="Level">
           </div>
       </div>
 
@@ -103,10 +103,10 @@
 
       <div class="row">
           <div class="col">
-              <input type="number" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+              <input type="number" name="Phone Number" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
           </div>
           <div class="col">
-              <input type="text" class="form-control" placeholder="University Name" aria-label="University Name">
+              <input type="text" name="University Name" class="form-control" placeholder="University Name" aria-label="University Name">
           </div>
       </div>
 
@@ -114,12 +114,12 @@
       <div class="row">
           <div class="col">
             <p style="color: black; text-align: center;">Student Image</p>
-              <input type="file" class="form-control" placeholder="Student image" aria-label="Student image">
+              <input type="file" name="Student image" class="form-control" placeholder="Student image" aria-label="Student image">
               <div class="invalid-feedback">Example invalid form file feedback</div>
           </div>  
           <div class="col">
             <p style="color:black; text-align: center;">University ID card Image</p>  
-            <input type="file" class="form-control" placeholder="Univesity ID card Image" aria-label="University ID card Image">
+            <input type="file" name="Univesity ID card Image" class="form-control" placeholder="Univesity ID card Image" aria-label="University ID card Image">
             <div class="invalid-feedback">Example invalid form file feedback</div>
           </div>
         </div>
@@ -128,7 +128,7 @@
     
 
       <div class="row1">
-          <button class="button1" type="submit" class="btn btn-primary">Submit</button>
+          <button class="button1" name="Save" type="submit" class="btn btn-primary">Submit</button>
       </div>
 
 
