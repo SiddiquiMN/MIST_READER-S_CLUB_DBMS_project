@@ -3,7 +3,7 @@
   <body>
 
     <?php
-$conn=oci_connect("09BIJOYA","09bijoya","localhost/XE");
+$conn=oci_connect("MALIHA25","202014025","localhost/XE");
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -21,7 +21,6 @@ if(isset($_POST['Save']))
 	$Univesity_ID_card_Image = $_POST['Univesity ID card Image'];
 	$query = oci_parse($conn, "INSERT INTO Participant(P_University_Name,P_ID,P_Photo,P_ID_Card_Photo) VALUES ('$University_Name','$ID','$Student_image','$Univesity_ID_card_Image')");
 	
-
 	$result = oci_execute($query);
 
 	if ($result) {

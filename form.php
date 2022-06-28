@@ -24,8 +24,8 @@ if(isset($_POST['save']))
 	$query = oci_parse($conn, "INSERT INTO Student(Std_Name, Std_ID,Std_Department,Std_Level,Std_Phone) 
 	values ('$Name','$ID','$Dept','$Level','$Phone')");
 	
-	$query1 = oci_parse($conn, "INSERT INTO Member(Std_ID,Mem_Gender,Mem_Email,Mem_Username,Mem_Password)
-    values ('$ID','$Gender','$Email','$Username','$Password')");
+	$query1 = oci_parse($conn, "INSERT INTO Member(Std_ID,Mem_DOB,Mem_Gender,Mem_Email,Mem_Username,Mem_Password)
+    values ('$ID',to_date($DOB,'mm-dd-yyyy'),'$Gender','$Email','$Username','$Password')");
 	$result = oci_execute($query);
 	$result1 = oci_execute($query1);
 	if ($result && $result1) {
