@@ -3,7 +3,7 @@
   <body>
 
     <?php
-$conn=oci_connect("MALIHA25","202014025","localhost/XE");
+$conn=oci_connect("DBMS_PROJECT","1234","localhost/XE");
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -25,7 +25,7 @@ if(isset($_POST['save']))
 	values ('$Name','$ID','$Dept','$Level','$Phone')");
 	
 	$query1 = oci_parse($conn, "INSERT INTO Member(Std_ID,Mem_DOB,Mem_Gender,Mem_Email,Mem_Username,Mem_Password)
-    values ('$ID',to_date($DOB,'mm-dd-yyyy'),'$Gender','$Email','$Username','$Password')");
+    values ('$ID',to_date($DOB,'MM-DD-YYYY'),'$Gender','$Email','$Username','$Password')");
 	$result = oci_execute($query);
 	$result1 = oci_execute($query1);
 	if ($result && $result1) {
