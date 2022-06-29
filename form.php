@@ -24,8 +24,15 @@ if(isset($_POST['save']))
 	$query = oci_parse($conn, "INSERT INTO Student(Std_Name, Std_ID,Std_Department,Std_Level,Std_Phone) 
 	values ('$Name','$ID','$Dept','$Level','$Phone')");
 	
-	$query1 = oci_parse($conn, "INSERT INTO Member(Std_ID,Mem_DOB,Mem_Gender,Mem_Email,Mem_Username,Mem_Password)
-    values ('$ID',to_date($DOB,'MM-DD-YYYY'),'$Gender','$Email','$Username','$Password')");
+	echo "Date of Birth";
+	echo $DOB;
+
+	/*$sql = oci_parse($conn, "Insert into student(std_id) values('100101')"); 
+	oci_execute($sql);
+	$sql1 =  oci_parse($conn,"Insert into member(std_ID,MEM_DOB) VALUES ('100101', to_date('".$DOB."', 'YYYY-MM-DD'))");
+	oci_execute($sql1);
+*/
+	$query1 = oci_parse($conn, "INSERT INTO Member(Std_ID,Mem_DOB,Mem_Gender,Mem_Email,Mem_Username,Mem_Password)      values ('".$ID."',to_date('".$DOB."','YYYY-MM-DD'),'$Gender','$Email','$Username','$Password')");
 	$result = oci_execute($query);
 	$result1 = oci_execute($query1);
 	if ($result && $result1) {

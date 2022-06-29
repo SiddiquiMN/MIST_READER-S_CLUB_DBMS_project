@@ -114,7 +114,7 @@
       <div class="row">
           <div class="col">
             <p style="color: black; text-align: center;">Student Image</p>
-              <input type="image" name="Student image" class="form-control" placeholder="Student image" aria-label="Student image">
+              <input type="file" name="Student image" class="form-control" placeholder="Student image" aria-label="Student image">
               <div class="invalid-feedback">Example invalid form file feedback</div>
           </div>  
           <div class="col">
