@@ -1,6 +1,3 @@
-
-<!-- Student logIn er por 1st ei page e asbe. student er home page bola jay -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +41,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+  <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
@@ -57,12 +54,18 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="student_index.php">Welcome</a></li>
-          
-          <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
-          <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
-          <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
-          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
+          <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="Member Reg.php">Member Registration</a></li>
+          <li><a class="nav-link scrollto" href="panel_member.php">Panel Members</a></li>
+          <li><a class="nav-link scrollto " href="Event.php">Events</a></li>
+          <li><a class="nav-link scrollto" href="Gallery.php">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="Contact.php">Contact</a></li>
+          <li><a class="nav-link scrollto" href="About.php">About</a></li>
+          <li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="Admin.php">Admin Log In</a></li>
+              <li><a href="Student.php">Student Log In</a></li>
+            </ul>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -70,62 +73,71 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
-    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
-
-
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="carousel-container">
-          <img src="assets/img/gallery1.jpg" class="d-block w-100" alt="Book1">
-        </div>
-      </div>
-       
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <img src="assets/img/gallery2.jpg" class="d-block w-100" alt="Book2">
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <img src="assets/img/gallery3.jpg" class="d-block w-100" alt="Book3">
-        </div>
-      </div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-      </a>
-
-    </div>
-
   
-  
-   
 
-  </section><!-- End Hero -->
+ 
 
-  <main id="main">
+  <main id="main" style="margin-top: 157px;">
 
+    <form method="post" action="Participant.php">
+      <div class="row">
+          <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Participate Registration Form</h1>
+          <div class="col">
+              <input type="number" name="ID" class="form-control" placeholder="ID" aria-label="ID">
+          </div>
+          <div class="col">
+              <input type="text"name="Name" class="form-control" placeholder="Name" aria-label="Name">
+          </div>
+      </div>
+      <br> <br>
+      <div class="row">
+          <div class="col">
+              <input type="text" name="Department" class="form-control" placeholder="Department" aria-label="Department">
+          </div>
+          <div class="col">
+              <input type="text" name="Level" class="form-control" placeholder="Level" aria-label="Level">
+          </div>
+      </div>
+
+      <br> <br>
+
+      <div class="row">
+          <div class="col">
+              <input type="number" name="Phone Number" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+          </div>
+          <div class="col">
+              <input type="text" name="University Name" class="form-control" placeholder="University Name" aria-label="University Name">
+          </div>
+      </div>
+
+      <br> <br>
+      <div class="row">
+          <div class="col">
+            <p style="color: black; text-align: center;">Student Image</p>
+              <input type="file" name="Student image" class="form-control" placeholder="Student image" aria-label="Student image">
+              <div class="invalid-feedback">Example invalid form file feedback</div>
+          </div>  
+          <div class="col">
+            <p style="color:black; text-align: center;">University ID card Image</p>  
+            <input type="file" name="Univesity ID card Image" class="form-control" placeholder="Univesity ID card Image" aria-label="University ID card Image">
+            <div class="invalid-feedback">Example invalid form file feedback</div>
+          </div>
+        </div>
+
+        <br> <br>
     
 
-  </main><!-- End #main -->
+      <div class="row1">
+          <button class="button1" name="Save" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+
+    </form>      
+
+  </main>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+ <footer id="footer">
     <div class="container">
       <h3>MIST READERS CLUB</h3>
       <p>READ MORE BOOKS,WIDEN YOUR KNOWLEDGE</p>
@@ -145,7 +157,7 @@
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
         Designed by <a href="#">MIST CSE DEPARTMENT</a>
-      </div>
+      <!--</div>
     </div>
   </footer><!-- End Footer -->
 

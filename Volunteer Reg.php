@@ -1,5 +1,5 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -25,10 +25,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -95,7 +95,7 @@
 
   <main id="main" style="margin-top: 157px;">
 
-  <form method="post" action="">
+  <form method="post" action="" style="padding: 50px;">
     <div class="row">
         <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Volunteer Registration Form</h1>
         <div class="col">
@@ -135,7 +135,7 @@
 
     <br> <br>
 
-    <div class="row1">
+    <div class="row1" style="margin-bottom: 0px;">
         <button class="button1" type="submit" class="btn btn-primary">Submit</button>
     </div>
 
@@ -184,4 +184,4 @@
 
 </body>
 
-</php>
+</html>

@@ -1,8 +1,8 @@
 
 <!--Admin log in er por 1st ei page e asbe--> 
 
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -28,10 +28,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -172,4 +172,4 @@
 
 </body>
 
-</php>
+</html>

@@ -1,5 +1,5 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -25,10 +25,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -79,7 +79,7 @@
 
   <main id="main" style="margin-top: 157px;">
 
-    <form method="post" action="Participant.php">
+    <form method="post" action="Participant.php" style="padding: 50px;">
       <div class="row">
           <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Participate Registration Form</h1>
           <div class="col">
@@ -113,12 +113,12 @@
       <br> <br>
       <div class="row">
           <div class="col">
-            <p style="color: black; text-align: center;">Student Image</p>
+            <p style="color: black; text-align: center;"><b>Student Image</b></p>
               <input type="file" name="Student image" class="form-control" placeholder="Student image" aria-label="Student image">
               <div class="invalid-feedback">Example invalid form file feedback</div>
           </div>  
           <div class="col">
-            <p style="color:black; text-align: center;">University ID card Image</p>  
+            <p style="color:black; text-align: center;"><b>University ID card Image</b></p>  
             <input type="file" name="Univesity ID card Image" class="form-control" placeholder="Univesity ID card Image" aria-label="University ID card Image">
             <div class="invalid-feedback">Example invalid form file feedback</div>
           </div>
@@ -127,7 +127,7 @@
         <br> <br>
     
 
-      <div class="row1">
+      <div class="row1" style="margin-bottom: 0px;">
           <button class="button1" name="Save" type="submit" class="btn btn-primary">Submit</button>
       </div>
 
@@ -176,4 +176,4 @@
 
 </body>
 
-</php>
+</html>

@@ -2,8 +2,8 @@
  <!-- admin end er page eta-->
  <!-- Book status & Student fine view hosse ei page e-->
 
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -29,10 +29,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -42,7 +42,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body style="background-image:url(./assets/img/bg_clr6.jpg); background-size:cover; background-repeat:no-repeat;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -81,7 +81,7 @@
   <!--Book status table-->
 
 <main id="main" style="margin-top: 157px;">
-  <h2 style="color:azure; text-align:center;"><b>Book Status</b></h2>
+  <h2 style="color:black; text-align:center;"><b>Book Status</b></h2>
   <br>
   <table class="table">
     <thead>
@@ -133,7 +133,7 @@
 
 <!-- Student with fine Details Table-->
 
-    <h2 style="color:azure; text-align:center;"><b>Student with Fine</b></h2>
+    <h2 style="color:black; text-align:center;"><b>Student with Fine</b></h2>
     <br>
     <table class="table">
       <thead>
@@ -169,7 +169,7 @@
 
  <!-- Student with books they demanded table-->   
 
-    <h2 style="color:azure; text-align:center;"><b>Demanded Books by the Student</b></h2>
+    <h2 style="color:black; text-align:center;"><b>Demanded Books by the Student</b></h2>
     <br>
     <table class="table">
       <thead>
@@ -244,4 +244,4 @@
 
 </body>
 
-</php>
+</html>

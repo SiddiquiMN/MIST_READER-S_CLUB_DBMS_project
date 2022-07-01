@@ -6,8 +6,8 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
 
  <!-- Studentend er page eta -->
 
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -33,10 +33,10 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -83,7 +83,7 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
     <h4 style="color: white; text-align:center;">If you have any demand regarding books please fill up the form attached below!</h4>
     <br>
     
-    <form method="post" action="demand_book_form.php">
+    <form method="post" action="demand_book_form.php" style="padding: 50px;">
       
       <div class="row">
             <h5 style="text-align: center; color: black; margin-bottom: 34px !important;">***All the boxes should be filled up correctly***</h5>
@@ -117,7 +117,7 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
 
         <br> <br>
 
-        <div class="row1">
+        <div class="row1" style="margin-bottom: 0px;">
             <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
         </div>
 
@@ -165,4 +165,4 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
 
 </body>
 
-</php>
+</html>

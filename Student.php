@@ -1,8 +1,8 @@
 
 <!-- ei page ta hosse Student er login page. Ekhane log in korle pore student er index page tate jabe. -->
 
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -28,10 +28,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -66,7 +66,7 @@
           <li><a class="nav-link scrollto" href="About.php">About</a></li>
           <li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="Admin.php">Admin Log In</a></li>
+              <li><a href="Admin.php">Admin Login</a></li>
               <li><a href="Student.php">Student Log In</a></li>
             </ul>
         </ul>
@@ -84,7 +84,7 @@
 
   <form action="loginstudent_server_pg.php" method="get"> 
     <div class="row2 shukor">
-        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Student Log In</h1>
+        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Student Login</h1>
         <div class="col" >
             <p style="color: black; text-align: center;">Username</p>
               <input type="text" class="form-control" placeholder="Username" aria-label="Username">
@@ -102,7 +102,7 @@
       <br> <br>
   
 
-    <div class="row1">
+    <div class="row1" style="margin-bottom: 0px;">
         <button class="button1" type="submit" class="btn btn-primary">Sign In</button>
         <p style="margin: 20px; color:black">Don't have any account ? <u><a href="Member Reg.php" style="color:yellow">Sign Up</a></u></p>
     </div>
@@ -150,4 +150,4 @@
 
 </body>
 
-</php>
+</html>

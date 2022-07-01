@@ -63,10 +63,10 @@ if(!empty($_REQUEST['msg'])){
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+ 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -119,7 +119,7 @@ if(!empty($_REQUEST['msg'])){
 
       <form action="loginadmin_server_pg.php" method="get"> 
         <div class="row2 shukor">
-            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Admin Log In</h1>
+            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Admin Login</h1>
             <div class="col" >
                 <p style="color: black; text-align: center;">Username</p>
                   <input type="text" class="form-control" placeholder="Username" aria-label="Username">
@@ -136,8 +136,8 @@ if(!empty($_REQUEST['msg'])){
         </div>
           <br> <br>
       
-          <div class="row1">
-              <button class="button1" type="submit" class="btn btn-primary">Sign In</button>
+          <div class="row1" style="margin-bottom: 0px;">
+              <button class="button1" type="submit" class="btn btn-primary">Sign in</button>
           </div>
         </form> 
 

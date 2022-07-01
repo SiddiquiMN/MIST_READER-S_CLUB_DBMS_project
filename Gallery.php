@@ -1,5 +1,5 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -25,10 +25,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Text: Selecao - v4.7.0
@@ -84,7 +84,7 @@
 
             <div class="section-title">
                 <p style="color: rgb(224, 246, 26);text-align: center;">MIST READER'S CLUB</p> <br>
-                <h4 style="color: black; text-align:center">Photos of MRC events 2022</h4>
+                <h4 style="color: black; text-align:center"><b>Photos of MRC events 2022</b></h4>
             </div>
 
             <div class="photo_case">
@@ -183,4 +183,4 @@
 
 </body>
 
-</php>
+</html>

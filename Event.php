@@ -1,5 +1,5 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -25,10 +25,10 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style1.css">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style1.css">
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -82,10 +82,11 @@
     <div class="event_info">
         <h1>Intra Department Quiz Competition-2022 held from 3 july,2022</h1>
           <h4>For participating in this prestigious event, fill up the form attaching below.</h4>
-          <h5><a href="Participate Reg.php"><u style="color: gold;"><i>Participate Registration Form</i></u></a></h5>
+          <br>
+          <h5><a href="Participate Reg.php"><u style="color: white;"><b><i>Participate Registration Form</i></b></u></a></h5>
         <br> <br>
         <h5>Want be a Volunteer in this upcomoing event?</h5>
-        <h6><a href="Volunteer Reg.php"><u style="color: gold;"><i>Volunteer Registration Form</i></u></a></h6>
+        <h5><a href="Volunteer Reg.php"><u style="color: white;"><b><i>Volunteer Registration Form</i></b></u></a></h5>
     </div>
 
 
@@ -133,4 +134,4 @@
 
 </body>
 
-</php>
+</html>
