@@ -32,17 +32,6 @@ CREATE TABLE Panel_Member
 );
 
 
-CREATE TABLE Participant
-(
-
-	Std_ID VARCHAR2(20),
-
-	P_University_Name VARCHAR2(40),
-	P_ID VARCHAR2(20),
-	P_Photo Blob,
-	P_ID_Card_Photo Blob,
-    FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
-);
 CREATE TABLE Volunteer
 (
 
@@ -180,6 +169,19 @@ CREATE TABLE ISSUE_DEMAND
 	Primary key(Std_ID,Isbn_no),
 	foreign key(Isbn_no) References Books(Isbn_no)ON DELETE CASCADE,
 	 FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
+);
+//new participant table, ager ta drop kore eita create koren
+CREATE TABLE Particpant
+(
+         P_Name VARCHAR2(40),
+	P_ID VARCHAR2(20) PRIMARY KEY,
+	P_Department VARCHAR2(20),
+         P_Univeristy VARCHAR2(30),
+	P_Level NUMBER,
+	P_Phone NUMBER,
+        P_Image Blob,
+        P_University_Image Blob
+       
 );
 
 

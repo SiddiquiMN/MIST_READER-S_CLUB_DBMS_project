@@ -119,7 +119,7 @@
           </div>  
           <div class="col">
             <p style="color:black; text-align: center;">University ID card Image</p>  
-            <input type="image" name="Univesity ID card Image" class="form-control" placeholder="Univesity ID card Image" aria-label="University ID card Image">
+            <input type="file" name="Univesity ID card Image" class="form-control" placeholder="Univesity ID card Image" aria-label="University ID card Image">
             <div class="invalid-feedback">Example invalid form file feedback</div>
           </div>
         </div>
