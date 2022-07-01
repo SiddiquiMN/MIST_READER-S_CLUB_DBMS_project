@@ -171,7 +171,7 @@ CREATE TABLE ISSUE_DEMAND
 	 FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
 );
 //new participant table, ager ta drop kore eita create koren
-CREATE TABLE Particpant
+CREATE TABLE Participant
 (
          P_Name VARCHAR2(40),
 	P_ID VARCHAR2(20) PRIMARY KEY,
