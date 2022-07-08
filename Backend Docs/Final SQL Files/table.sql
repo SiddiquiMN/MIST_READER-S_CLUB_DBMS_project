@@ -170,7 +170,6 @@ CREATE TABLE ISSUE_DEMAND
 	foreign key(Isbn_no) References Books(Isbn_no)ON DELETE CASCADE,
 	 FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
 );
-
 //new participant table, ager ta drop kore eita create koren
 CREATE TABLE Participant
 (
@@ -184,6 +183,10 @@ CREATE TABLE Participant
         P_University_Image Blob
        
 );
+
+//drop sponsor_amount
+
+alter table event_expense drop column sponsor_amount;
 
 
 

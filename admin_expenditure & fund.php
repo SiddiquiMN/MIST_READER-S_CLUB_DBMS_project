@@ -82,11 +82,238 @@
  
 
   <main id="main" style="margin-top: 157px;">
+  <h2 style="color:azure; text-align:center;"><b>Monthly Expense for 2022</b></h2>
+  <br>
+  <table class="table">
+    <thead>
+      <tr align="center">
+        <th scope="col">Month</th>
+        <th scope="col">Amount Spent</th>
+       
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+   
+    <?php
 
-    <p style="color: white;">Expenditure & Fund Page</p>
+  // Connects to the XE service (i.e. database) on the "localhost" machine
 
-  </main>
-    <br> <br> <br> <br> <br> <br>
+
+  /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
+
+        $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
+        if (!$conn) {
+            $e = oci_error();
+            trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+        }
+
+        $stid = oci_parse($conn,"select entry_month,sum(entry_amount) from expenditure group by entry_month");
+        oci_execute($stid);
+
+
+        while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+            echo "<tr align='center'>\n";
+            foreach ($row as $item) {
+                echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+            }
+            echo "</tr>\n";
+        }
+
+        ?>
+    
+    </tbody>
+</table>
+
+<!--Drop down list theke month select korchi -->
+<label for="cars">Select Month:</label>
+    <form action="" method="post">
+    <select name="Month">
+    <option value="" disabled selected>Choose option</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+<br><br>
+    <!--Monthly Expense Detailed Table-->
+    <!--Event Expense-->
+<?php    
+ if(isset($_POST['submit'])){
+  if(!empty($_POST['Month'])) {
+   
+$selected = $_POST['Month'];
+echo 'Event Expense for the Month: ' . $selected;}}?>
+    <table class="table">
+      <thead>
+        <tr align="center">
+        <th scope="col">Entry Number</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date</th>
+        <th scope="col">Month</th>
+        <th scope="col">Year</th>
+        <th scope="col">Event ID</th>
+        <th scope="col">Type</th>
+        <th scope="col">Sponsor Name</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+      <?php
+      if(isset($_POST['submit'])){
+        if(!empty($_POST['Month'])) {
+          $selected = $_POST['Month'];
+         
+          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
+         /*Monthly Event Expense */
+          $stid = oci_parse($conn,"select *from expenditure join event_expense using (entry_number) where entry_month='".$selected."' AND entry_year='2022'");
+          oci_execute($stid);
+          
+  
+          while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
+
+          
+  
+    
+        } else {
+          echo 'Please select the value.';
+        }
+      }
+    ?>
+      </tbody>
+    </table>
+    <br>
+ <!--Books Purchased Detailed Table -->
+ <?php    
+ if(isset($_POST['submit'])){
+  if(!empty($_POST['Month'])) {
+   
+$selected = $_POST['Month'];
+echo 'Books Purchased for the Month: ' . $selected;}}?>
+ 
+ <table class="table">
+      <thead>
+        <tr align="center">
+        <th scope="col">Entry Number</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date</th>
+        <th scope="col">Month</th>
+        <th scope="col">Year</th>
+        <th scope="col">Books Quantity</th>
+        
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+      <?php
+      if(isset($_POST['submit'])){
+        if(!empty($_POST['Month'])) {
+          $selected = $_POST['Month'];
+         
+          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
+         /*Others Expense */
+          $stid = oci_parse($conn,"select *from expenditure join books_purchased using (entry_number) where entry_month='".$selected."'AND entry_year='2022'");
+          oci_execute($stid);
+  
+  
+          while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
+
+          
+  
+    
+        } else {
+          echo 'Please select the value.';
+        }
+      }
+    ?>
+      </tbody>
+    </table>
+    <br>
+    <!--Others monthly expense -->
+    <?php    
+ if(isset($_POST['submit'])){
+  if(!empty($_POST['Month'])) {
+   
+$selected = $_POST['Month'];
+echo 'Other Expenses for the Month: ' . $selected;}}?>
+    <table class="table">
+      <thead>
+        <tr align="center">
+        <th scope="col">Entry Number</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date</th>
+        <th scope="col">Month</th>
+        <th scope="col">Year</th>
+        <th scope="col">Category</th>
+        
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+      <?php
+      if(isset($_POST['submit'])){
+        if(!empty($_POST['Month'])) {
+          $selected = $_POST['Month'];
+         
+          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
+         /*Others Expense */
+          $stid = oci_parse($conn,"select *from expenditure join others using (entry_number)  where entry_month='".$selected."'AND entry_year='2022'");
+          oci_execute($stid);
+  
+  
+          while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
+
+          
+  
+    
+        } else {
+          echo 'Please select the value.';
+        }
+      }
+    ?>
+      </tbody>
+    </table>
+    <br>
   <!-- ======= Footer ======= -->
  <footer id="footer">
     <div class="container">

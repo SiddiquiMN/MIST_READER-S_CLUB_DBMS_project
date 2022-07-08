@@ -26,6 +26,8 @@ WHERE Std_ID IS  NULL;  //currently available books
 8.Select Std_id as "Student ID",Std_name as "Student Name",Title,(return_date-due_date)*5 as "Fine" from Books join Student using (Std_id)
 where return_date-due_date>0; 
 
+9.select entry_month,sum(entry_amount) from expenditure group by entry_month //monthly expense
+
 
 
 
