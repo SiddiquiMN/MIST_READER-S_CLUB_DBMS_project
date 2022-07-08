@@ -63,7 +63,14 @@
           <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
          
           <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
-          <li><a class="nav-link scrollto" href="admin_expenditure & fund.php">Expenditure & Fund</a></li>
+          <li class="dropdown"><a href="#"><span>Expenditure & Fund</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a class="nav-link scrollto" href="Monthly_Expense.php">Monthly Expense</a></li>
+              <li><a href="">Event Expense</a></li>
+              <li><a href="">View Fund</a></li>
+            </ul>
+        </ul>
+         
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
           <li><a class="nav-link scrollto" href="#">Log Out</a></li>
           <!--<li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>

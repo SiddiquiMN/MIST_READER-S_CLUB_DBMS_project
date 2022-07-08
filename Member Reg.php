@@ -36,6 +36,36 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script type = "text/javascript">
+       
+       // Form validation code will come here.
+    //-->
+
+    function validate ()
+    {var id_valid = document.getElementById("ID").value;
+      var phone_valid = document.getElementById("Number").value;
+   
+    var reg_ID = /('20')[0-9]\d{9}/;
+    var reg_phone = /('01')[0-9]\d{11}/;
+   if (reg_.test(text))
+   {document.getElementById("lbtext").innerHTML="Valid";
+   document.getElementById("lbtext").style.visibility="visible";
+   document.getElementById("lbtext").style.color="green";
+
+
+
+
+}
+else 
+{document.getElementById("lbtext").innerHTML="InValid";
+   document.getElementById("lbtext").style.visibility="visible";
+   document.getElementById("lbtext").style.color="red";}
+   
+   
+   
+   
+   }
+ </script>      
 </head>
 
 <body>
@@ -84,7 +114,7 @@
       <div class="row">
             <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Member Registration Form</h1>
             <div class="col">
-                <input type="number" name="ID"class="form-control" placeholder="ID" aria-label="ID">
+                <input type="number" name="ID" id="ID"class="form-control" placeholder="ID" aria-label="ID">
             </div>
             <div class="col">
                 <input type="text" name="Name"class="form-control" placeholder="Name" aria-label="Name">
@@ -126,7 +156,7 @@
                 <input type="password" name="Password"class="form-control" placeholder="Password" aria-label="Password">
             </div>
             <div class="col">
-                <input type="number" name="Phone"class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+                <input type="number" name="Phone" id="Number"class="form-control" placeholder="Phone Number" aria-label="Phone Number">
             </div>
         </div>
 
