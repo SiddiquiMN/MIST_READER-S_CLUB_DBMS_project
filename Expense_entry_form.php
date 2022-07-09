@@ -116,31 +116,22 @@
 
   <main id="main" style="margin-top: 157px;">
 
-    <form method="post" action="form.php" style="padding:50px;">
+    <form method="post" action="expense_entry_database.php" style="padding:50px;">
       
       <div class="row">
-            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Expenditure & Fund Page</h1>
+            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Expense Entry</h1>
+           
             <div class="col">
-                <input type="number" name="Entry_No"class="form-control" placeholder="Entry_No" aria-label="Entry_No">
-            </div>
-            <div class="col">
-                <input type="Date" name="Date"class="form-control" placeholder="Date" aria-label="Date">
-            </div>
-        </div>
-        <br> <br>
-        <div class="row">
-            <div class="col">
-                <input type="text" name="Month"class="form-control" placeholder="Month" aria-label="Month">
-            </div>
-            <div class="col">
-                <input type="text" name="Year"class="form-control" placeholder="Year" aria-label="Year">
+                <input type="Number" name="Date"class="form-control" placeholder="Date" aria-label="Date"><br>
+                <input type="text" name="Month"class="form-control" placeholder="Month" aria-label="Month"><br>
+                <input type="Number" name="Year"class="form-control" placeholder="Year" aria-label="Year">
             </div>
         </div>
-
-        <br> <br>
+        
+        <br>
         <div class="row">
             <div class="col">
-                <input type="text" name="Amount" class="form-control" placeholder="Amount" aria-label="Amount">
+                <input type="Number" name="Amount" class="form-control" placeholder="Amount" aria-label="Amount">
             </div>
         </div>
         <br> <br>
@@ -168,9 +159,9 @@
 
                 <div class="col-12" style="text-align:center;">
                     <div class="input-group1" id="mycode" style="visibility: hidden;">
-                    <input type="number" id="fno" name="fno" class="form-control" placeholder="Event ID" aria-label="Event ID"> <br>
-                    <input type="text" id="fno" name="fno" class="form-control" placeholder="Event Type" aria-label="Event Type"> <br>
-                    <input type="text" id="fno" name="fno" class="form-control" placeholder="Sponsor Name" aria-label="Sponsor Name">
+                    <input type="number" id="fno" name="Event_ID" class="form-control" placeholder="Event ID" aria-label="Event ID"> <br>
+                    <input type="text" id="fno" name="Expense_Category" class="form-control" placeholder="Expense Category" aria-label="Event Type"> <br>
+                    <input type="text" id="fno" name="Sponsor_Name" class="form-control" placeholder="Sponsor Name" aria-label="Sponsor Name">
                     </div> <!--mycode.input-group1--> 
                 </div>  <!--col-2-->
             </div>
@@ -238,7 +229,7 @@
         <br> <br>
 
         <div class="row1" style="margin-bottom: 0px;">
-            <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
+            <button class="button1" name="HIT"type="submit" class="btn btn-primary">Submit</button>
         </div>
 
     </form>  
@@ -283,6 +274,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  
 </body>
 
 </html>

@@ -13,7 +13,16 @@
     </form>  
     <?php
 
-
+    CREATE TRIGGER `person_validate_insert`
+	BEFORE INSERT
+	ON `person`
+	FOR EACH ROW
+BEGIN
+	IF NEW.`email` NOT LIKE '%_@%_.__%' THEN
+		SIGNAL SQLSTATE VALUE '45000'
+			SET MESSAGE_TEXT = '[table:person] - `email` column is not valid';
+	END IF;
+END;
 
     ?>
    </body>
