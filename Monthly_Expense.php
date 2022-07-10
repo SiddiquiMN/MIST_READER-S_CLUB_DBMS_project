@@ -125,7 +125,7 @@
 </table>
 
 <!--Drop down list theke month select korchi -->
-<label for="cars">Select Month:</label>
+<h4><label style=color:azure; text-align:center; for="cars">Select Month:</label> </h4>
     <form action="" method="post">
     <select name="Month">
     <option value="" disabled selected>Choose option</option>
@@ -153,7 +153,7 @@
   if(!empty($_POST['Month'])) {
    
 $selected = $_POST['Month'];
-echo 'Event Expense for the Month: ' . $selected;}}?>
+echo "<h4 style=color:azure; text-align:center;><b>Event Expenses for the Month:  $selected</b></h4>";}}?> 
     <table class="table">
       <thead>
         <tr align="center">
@@ -209,7 +209,7 @@ echo 'Event Expense for the Month: ' . $selected;}}?>
   if(!empty($_POST['Month'])) {
    
 $selected = $_POST['Month'];
-echo 'Books Purchased for the Month: ' . $selected;}}?>
+echo "<h4 style=color:azure; text-align:center;><b>Books Purchased for the Month:  $selected</b></h4>";}}?> 
  
  <table class="table">
       <thead>
@@ -265,7 +265,7 @@ echo 'Books Purchased for the Month: ' . $selected;}}?>
   if(!empty($_POST['Month'])) {
    
 $selected = $_POST['Month'];
-echo 'Other Expenses for the Month: ' . $selected;}}?>
+echo "<h4 style=color:azure; text-align:center;><b>Other Expenses for the Month:  $selected</b></h4>";}}?> 
     <table class="table">
       <thead>
         <tr align="center">
