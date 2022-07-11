@@ -189,7 +189,7 @@
 
                     <div class="col-12" style="text-align:center;">
                         <div class="input-group1" id="mycode1" style="visibility: hidden;">
-                        <input type="number" id="fno" name="fno" class="form-control" placeholder="Book Quantity" aria-label="Book Quantity">
+                        <input type="number" id="fno" name="Book_Quantity" class="form-control" placeholder="Book Quantity" aria-label="Book Quantity">
                         </div> <!--mycode.input-group1--> 
                     </div>  <!--col-2-->
                 
@@ -218,7 +218,7 @@
 
                     <div class="col-12" style="text-align:center;">
                         <div class="input-group1" id="mycode2" style="visibility: hidden;">
-                        <input type="text" id="fno" name="fno" class="form-control" placeholder="Category" aria-label="Category">
+                        <input type="text" id="fno" name="Category" class="form-control" placeholder="Category" aria-label="Category">
                         </div> <!--mycode.input-group1--> 
                     </div>  <!--col-2-->
                 

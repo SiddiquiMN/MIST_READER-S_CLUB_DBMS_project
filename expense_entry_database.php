@@ -18,10 +18,13 @@ if(isset($_POST['HIT']))
     $Event_ID = $_POST['Event_ID'];
     $Expense_Category = $_POST['Expense_Category'];
     $Sponsor_Name = $_POST['Sponsor_Name'];
+	$Book_Quantity = $_POST['Book_Quantity'];
+	$Category = $_POST['Category'];
 	
 	$query = oci_parse($conn,"INSERT INTO Expenditure(Entry_Number, Entry_Date,Entry_Month,Entry_Year,Entry_Amount) 
 	values (Expense_Sequence.NEXTVAL,'$Date','$Month','$Year','$Amount')");
-	
+	$result = oci_execute($query);
+	/* ----->entry for expenditure <------- */
 
 
 	/*$sql = oci_parse($conn, "Insert into student(std_id) values('100101')"); 
@@ -29,21 +32,63 @@ if(isset($_POST['HIT']))
 	$sql1 =  oci_parse($conn,"Insert into member(std_ID,MEM_DOB) VALUES ('100101', to_date('".$DOB."', 'YYYY-MM-DD'))");
 	oci_execute($sql1);
 */ 
-
+  if($Event_ID!=NULL)
 	//$query1 = oci_parse($conn, "INSERT INTO Member(Std_ID,Mem_DOB,Mem_Gender,Mem_Email,Mem_Username,Mem_Password)      values ('".$ID."',to_date('".$DOB."','YYYY-MM-DD'),'$Gender','$Email','$Username','$Password')");
-	$result = oci_execute($query);
-    $query1 = oci_parse($conn,"INSERT INTO Event_Expense(Entry_Number, Event_ID,Type,Sponsor_Name) 
-	values (Expense_Sequence.NEXTVAL,'$Event_ID','$Expense_Category','$Sponsor_Name')");
+	
+   { $query1 = oci_parse($conn,"INSERT INTO Event_Expense(Entry_Number, Event_ID,Type,Sponsor_Name) 
+	values (Expense_Sequence.CURRVAL,'$Event_ID','$Expense_Category','$Sponsor_Name')");
 	
 	$result1 = oci_execute($query1);
 	if ($result && $result1) {
-				echo "Data added Successfully !";
-				exit();
-	}
-	else{
+		echo "Data added Successfully Result1!";
+		exit();
+
+			/* ----->entry for event_expense <------- */
+}
+
+
+}
+
+  if($Book_Quantity!=NULL)
+  {$query2 = oci_parse($conn,"INSERT INTO Books_Purchased(Entry_Number, Books_Quantity) 
+	values (Expense_Sequence.CURRVAL,'$Book_Quantity')");
+	$result2 = oci_execute($query2);
+	if ($result && $result2) {
+		echo "Data added Successfully Result2!";
+		exit();
+			/* ----->entry for books <------- */
+}
+
+
+
+
+}
+if($Category!=NULL)
+{$query3 = oci_parse($conn,"INSERT INTO Others(Entry_Number,Category) 
+  values (Expense_Sequence.CURRVAL,'$Category')");
+  $result3 = oci_execute($query3);
+  
+  if ($result3) {
+	echo "Data added Successfully Result3!";
+	exit();
+
+		/* ----->entry for others <------- */
+}
+
+
+}
+    /*$query2 = oci_parse($conn,"INSERT INTO Books_Purchased(Entry_Number, Books_Quantity) 
+	values (Expense_Sequence.NEXTVAL,'$Book_Quantity')"); */
+	
+	
+	//$result2 = oci_execute($query2);
+	
+
+
+	/*else{
 		echo "Error !";
 				exit();
-	}
+	} */
 }
 
 ?>
