@@ -82,7 +82,7 @@
 
   <main id="main" style="margin-top: 157px;">
 
-  <form action="student_index.php" method="get"> 
+  <form action="Student_Log_In.php" method="post"> 
     <div class="row2 shukor">
         <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Student Login</h1>
         <div class="col" >
