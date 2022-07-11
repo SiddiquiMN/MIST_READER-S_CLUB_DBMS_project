@@ -169,7 +169,7 @@
 
  <!-- Student with books they demanded table-->   
 
-    <h2 style="color:black; text-align:center;"><b>Demanded Books by the Student</b></h2>
+    <h2 style="color:black; text-align:center;"><b>Issue Demanded by Students</b></h2>
     <br>
     <table class="table">
       <thead>
@@ -201,6 +201,21 @@
       </tbody>
     </table>
     <br>
+
+    <form method="post" action="grant_issue.php" style="padding:50px;">
+      
+      <div class="row">
+            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Grant Issue</h1>
+           
+            <div class="col">
+                <input type="Number" name="Std_ID"class="form-control" placeholder="Student ID" aria-label="Student_ID"><br>
+                <input type="Number" name="ISBN"class="form-control" placeholder="ISBN No." aria-label="ISBN No."><br>
+             
+            </div>
+            <div class="row1" style="margin-bottom: 0px;">
+            <button class="button1" name="SUBMIT"type="SUBMIT" class="btn btn-primary">Submit</button>
+        </div>
+        </div></form>
 
 </main>
 

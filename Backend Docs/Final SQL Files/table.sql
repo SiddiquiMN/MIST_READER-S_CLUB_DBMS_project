@@ -168,8 +168,7 @@ CREATE TABLE ISSUE_DEMAND
 	Isbn_no varchar2(30) ,
 	Book_Title varchar2(80),
 	Primary key(Std_ID,Isbn_no),
-	foreign key(Isbn_no) References Books(Isbn_no)ON DELETE CASCADE,
-	 FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE
+
 );
 //new participant table, ager ta drop kore eita create koren
 CREATE TABLE Participant
