@@ -32,7 +32,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style1.css">
-  
+
 </head>
 
 <body>
@@ -86,13 +86,12 @@
 
   <main id="main" style="margin-top: 157px;">
 
-    <form method="post" action="expense_entry_database.php" style="padding:50px;">
+    <form method="post" action="fund_entry_database.php" style="padding:50px;">
       
       <div class="row">
             <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Fund Entry</h1>
            
             <div class="col">
-                <input type="Number" name="Fund ID"class="form-control" placeholder="Fund ID" aria-label="Fund ID"><br>
                 <input type="text" name="Source"class="form-control" placeholder="Source" aria-label="Source"><br>
                 <input type="Number" name="Amount"class="form-control" placeholder="Amount" aria-label="Amount"><br>
                     <h5 align='center' style="color: black;" >=====Transaction Date=====</h5><br>
