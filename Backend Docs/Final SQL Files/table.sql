@@ -188,6 +188,13 @@ CREATE TABLE Participant
 
 alter table event_expense drop column sponsor_amount;
 
+//rename due_date to issue_date
+ALTER TABLE books
+RENAME COLUMN
+due_date
+TO
+issue_date
+
 
 
 
