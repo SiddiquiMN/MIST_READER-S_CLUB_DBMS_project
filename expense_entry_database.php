@@ -34,9 +34,9 @@ if(isset($_POST['HIT']))
 */ 
   if($Event_ID!=NULL)
 	//$query1 = oci_parse($conn, "INSERT INTO Member(Std_ID,Mem_DOB,Mem_Gender,Mem_Email,Mem_Username,Mem_Password)      values ('".$ID."',to_date('".$DOB."','YYYY-MM-DD'),'$Gender','$Email','$Username','$Password')");
-	
+
    { $query1 = oci_parse($conn,"INSERT INTO Event_Expense(Entry_Number, Event_ID,Type,Sponsor_Name) 
-	values (Expense_Sequence.CURRVAL,'$Event_ID','$Expense_Category','$Sponsor_Name')");
+	values (concat(Expense_Sequence.CURRVAL),'$Event_ID','$Expense_Category','$Sponsor_Name')");
 	
 	$result1 = oci_execute($query1);
 	if ($result && $result1) {
