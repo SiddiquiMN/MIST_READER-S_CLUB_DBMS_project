@@ -69,6 +69,7 @@
               <li><a href="">Event Expense</a></li>
               <li><a href="">View Fund</a></li>
               <li><a href="Expense_entry_form.php">=>Expense Entry<=</a></li>
+              <li><a href="fund_entry.php">=>Fund Entry<=</a></li>
             </ul>
         </ul>
          

@@ -1,6 +1,5 @@
 
- <!-- admin end er page eta-->
- <!-- Book status & Student fine view hosse ei page e-->
+<!--admin login er por ei page dekhte parbe -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,20 +28,14 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
+ 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style1.css">
-
-  <!-- =======================================================
-  * Template Name: Selecao - v4.7.0
-  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
 </head>
 
-<body style="background-image:url(./assets/img/bg_clr6.jpg); background-size:cover; background-repeat:no-repeat;">
+<body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -87,147 +80,38 @@
     </div>
   </header><!-- End Header -->
 
-  <!--Book status table-->
+  
 
-<main id="main" style="margin-top: 157px;">
-  <h2 style="color:black; text-align:center;"><b>Book Status</b></h2>
-  <br>
-  <table class="table">
-    <thead>
-      <tr align="center">
-        <th scope="col">Student ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Department</th>
-        <th scope="col">Book</th>
-        <th scope="col">Due  Date</th>
-        <th scope="col">Return Date</th>
-      </tr>
-    </thead>
-    <tbody class="table-group-divider">
-    
-    
-    <?php
+ 
 
-  // Connects to the XE service (i.e. database) on the "localhost" machine
+  <main id="main" style="margin-top: 157px;">
 
-
-  /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
-
-        $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
-        if (!$conn) {
-            $e = oci_error();
-            trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-        }
-
-        $stid = oci_parse($conn, 'select Std_ID as "Student ID", Std_Name as "Student Name", Std_Department as "Department", Title, Due_Date,Return_Date
-        from Student join Books using (Std_ID)');
-        oci_execute($stid);
-
-
-        while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-            echo "<tr align='center'>\n";
-            foreach ($row as $item) {
-                echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-            }
-            echo "</tr>\n";
-        }
-
-      ?>
-    
-    </tbody>
-</table>
-
-
-<br><br>
-
-<!-- Student with fine Details Table-->
-
-    <h2 style="color:black; text-align:center;"><b>Student with Fine</b></h2>
-    <br>
-    <table class="table">
-      <thead>
-        <tr align="center">
-          <th scope="col">Student ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Book</th>
-          <th scope="col">Fine</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-
-        <?php
-              $sti = oci_parse($conn, 'Select Std_id as "Student ID",Std_name as "Student Name",Title,(return_date-due_date)*5 as "Fine" from Books join Student using (Std_id)
-              where return_date-due_date>0');
-              oci_execute($sti);
-
-
-              while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
-                  echo "<tr align='center'>\n";
-                  foreach ($row as $item) {
-                      echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-                  }
-                  echo "</tr>\n";
-              }
-
-            ?>
-      </tbody>
-    </table>
-    <br>
-
-    <br><br>
-
- <!-- Student with books they demanded table-->   
-
-    <h2 style="color:black; text-align:center;"><b>Issue Demanded by Students</b></h2>
-    <br>
-    <table class="table">
-      <thead>
-        <tr align="center">
-          <th scope="col">Student ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Department</th>
-          <th scope="col">Level</th>
-          <th scope="col">ISBN NO.</th>
-          <th scope="col">Book Title</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-
-        <?php
-              $sti = oci_parse($conn, 'Select * from ISSUE_DEMAND');
-              oci_execute($sti);
-
-
-              while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
-                  echo "<tr align='center'>\n";
-                  foreach ($row as $item) {
-                      echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-                  }
-                  echo "</tr>\n";
-              }
-
-            ?>
-      </tbody>
-    </table>
-    <br>
-
-    <form method="post" action="grant_issue.php" style="padding:50px;">
+    <form method="post" action="expense_entry_database.php" style="padding:50px;">
       
       <div class="row">
-            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Grant Issue</h1>
+            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Fund Entry</h1>
            
             <div class="col">
-                <input type="Number" name="Std_ID"class="form-control" placeholder="Student ID" aria-label="Student_ID"><br>
-                <input type="Number" name="ISBN"class="form-control" placeholder="ISBN No." aria-label="ISBN No."><br>
-             
+                <input type="Number" name="Fund ID"class="form-control" placeholder="Fund ID" aria-label="Fund ID"><br>
+                <input type="text" name="Source"class="form-control" placeholder="Source" aria-label="Source"><br>
+                <input type="Number" name="Amount"class="form-control" placeholder="Amount" aria-label="Amount"><br>
+                    <h5 align='center' style="color: black;" >=====Transaction Date=====</h5><br>
+                <input type="Date" name="Transaction_Date"class="form-control" placeholder="Transaction Date" aria-label="Transaction Date">
             </div>
-            <div class="row1" style="margin-bottom: 0px;">
-            <button class="button1" name="SUBMIT"type="SUBMIT" class="btn btn-primary">Submit</button>
         </div>
-        </div></form>
+        
+        <br>
+        
+        <br> <br>
 
-</main>
+        <div class="row1" style="margin-bottom: 0px;">
+            <button class="button1" name="HIT"type="submit" class="btn btn-primary">Submit</button>
+        </div>
 
+    </form>  
+
+  </main>
+    <br> <br> <br> 
   <!-- ======= Footer ======= -->
  <footer id="footer">
     <div class="container">
@@ -248,7 +132,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">MIST CSE DEPARTMENT</a>
+        Designed by <a href="#">MIST CSE DEPARTMENT</a>
       <!--</div>
     </div>
   </footer><!-- End Footer -->
@@ -266,6 +150,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  
 </body>
 
 </html>
