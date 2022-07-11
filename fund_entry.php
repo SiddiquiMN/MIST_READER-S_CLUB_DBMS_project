@@ -1,5 +1,5 @@
 
-<!-- ei page ta hosse Student er login page. Ekhane log in korle pore student er index page tate jabe. -->
+<!--admin login er por ei page dekhte parbe -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,17 +28,11 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
+ 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style1.css">
-
-  <!-- =======================================================
-  * Template Name: Selecao - v4.7.0
-  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
 </head>
 
 <body>
@@ -54,21 +48,31 @@
         <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
     
-
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
-          <li><a class="nav-link scrollto" href="Member Reg.php">Member Registration</a></li>
-          <li><a class="nav-link scrollto" href="panel_member.php">Panel Members</a></li>
-          <li><a class="nav-link scrollto " href="Event.php">Events</a></li>
-          <li><a class="nav-link scrollto" href="Gallery.php">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="Contact.php">Contact</a></li>
-          <li><a class="nav-link scrollto" href="About.php">About</a></li>
-          <li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto active" href="admin_index.php">Admin</a></li>
+          
+          <li><a class="nav-link scrollto" href="Books.php">Add Books</a></li>
+          <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
+         
+          <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
+          <li class="dropdown"><a href="#"><span>Expenditure & Fund</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="Admin.php">Admin Login</a></li>
-              <li><a href="Student.php">Student Log In</a></li>
+            <li><a class="nav-link scrollto" href="Monthly_Expense.php">Monthly Expense</a></li>
+              <li><a href="">Event Expense</a></li>
+              <li><a href="">View Fund</a></li>
+              <li><a href="Expense_entry_form.php">=>Expense Entry<=</a></li>
+              <li><a href="fund_entry.php">=>Fund Entry<=</a></li>
             </ul>
+        </ul>
+         
+         <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
+          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
+          <!--<li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="Admin.php">Admin Log In</a></li>
+              <li><a href="Student.php">Student Log In</a></li>
+            </ul> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -82,34 +86,32 @@
 
   <main id="main" style="margin-top: 157px;">
 
-  <form action="Student_Log_In.php" method="post"> 
-    <div class="row2 shukor">
-        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Student Login</h1>
-        <div class="col" >
-            <p style="color: black; text-align: center;">Username</p>
-              <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username">
-              <br>
-        </div>
-         <!-- <label style="color:red;">*<?php echo $stuusermsg ?></label>-->
-    
+    <form method="post" action="expense_entry_database.php" style="padding:50px;">
       
-        <div class="col">
-            <p style="color: black; text-align: center;">Password</p>
-              <input type="password" name="password" class="form-control" placeholder="password" aria-label="password">
+      <div class="row">
+            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Fund Entry</h1>
+           
+            <div class="col">
+                <input type="Number" name="Fund ID"class="form-control" placeholder="Fund ID" aria-label="Fund ID"><br>
+                <input type="text" name="Source"class="form-control" placeholder="Source" aria-label="Source"><br>
+                <input type="Number" name="Amount"class="form-control" placeholder="Amount" aria-label="Amount"><br>
+                    <h5 align='center' style="color: black;" >=====Transaction Date=====</h5><br>
+                <input type="Date" name="Transaction_Date"class="form-control" placeholder="Transaction Date" aria-label="Transaction Date">
+            </div>
         </div>
-      <!--<label style="color:red;">*<?php echo $stupassmsg ?></label>-->
-    </div>
-      <br> <br>
-  
+        
+        <br>
+        
+        <br> <br>
 
-    <div class="row1" style="margin-bottom: 0px;">
-        <button class="button1" name="Save" type="submit" class="btn btn-primary">Sign In</button>
-        <p style="margin: 20px; color:black">Don't have any account ? <u><a href="Member Reg.php" style="color:yellow">Sign Up</a></u></p>
-    </div>
-  </form>
+        <div class="row1" style="margin-bottom: 0px;">
+            <button class="button1" name="HIT"type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+    </form>  
 
   </main>
-
+    <br> <br> <br> 
   <!-- ======= Footer ======= -->
  <footer id="footer">
     <div class="container">
@@ -148,6 +150,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  
 </body>
 
 </html>
