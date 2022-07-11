@@ -80,48 +80,7 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
 
   <main id="main" style="margin-top: 157px;">
 
-    <h4 style="color: white; text-align:center;">If you have any demand regarding books please fill up the form attached below!</h4>
-    <br>
     
-    <form method="post" action="demand_book_form.php" style="padding: 50px;">
-      
-      <div class="row">
-            <h5 style="text-align: center; color: black; margin-bottom: 34px !important;">***All the boxes should be filled up correctly***</h5>
-            <div class="col">
-                <input type="number" name="ID"class="form-control" placeholder="ID" aria-label="ID">
-            </div>
-            <div class="col">
-                <input type="text" name="Name"class="form-control" placeholder="Name" aria-label="Name">
-            </div>
-        </div>
-        <br> <br>
-        <div class="row">
-            <div class="col">
-                <input type="text" name="Department"class="form-control" placeholder="Department" aria-label="Department">
-            </div>
-            <div class="col">
-                <input type="text" name="Level"class="form-control" placeholder="Level" aria-label="Level">
-            </div>
-        </div>
-
-        <br> <br>
-        <div class="row">
-            <div class="col">
-                <input type="text" name="Book_Title" class="form-control" placeholder="Name of the Book" aria-label="Book_Title">
-            </div>
-
-            <div class="col">
-                <input type="text" name="ISBN_No" class="form-control" placeholder="ISBN No" aria-label="ISBN No">
-            </div>
-        </div>   
-
-        <br> <br>
-
-        <div class="row1" style="margin-bottom: 0px;">
-            <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
-        </div>
-
-    </form>  
 
   </main>
     <br> <br> 

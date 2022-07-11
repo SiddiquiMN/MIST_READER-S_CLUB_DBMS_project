@@ -68,17 +68,105 @@
 
     </div>
   </header><!-- End Header -->
+<main id="main" style="margin-top: 157px;">
 
-  
+    
+    <?php
 
+session_start();
+
+
+
+$user = $_SESSION['user'];
+ echo "<h4 style='color:azure; text-align:center';><b>Welcome, $user!</b></h4>";
+// = "select title,issue_date,return_date from member join books using (std_id) where MEM_USERNAME='$user'";
+// $stid = oci_parse($conn, $sql);
+// oci_execute($stid);
+echo "<h4 style='color:azure; text-align:center';><b>Books Currently Borrowed:</b></h4>"; ?>
+
+   
  
+    <table class="table">
+      <thead>
+        <tr align="center">
+        <th scope="col">Book Title</th>
+        <th scope="col">Issue Date</th>
+        <th scope="col">Return Date</th>
+       
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
 
-  <main id="main" style="margin-top: 157px;">
+      <?php
+      
+         
+          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
+       
+          $stid = oci_parse($conn,"select title,issue_date,return_date from member join books using (std_id) where MEM_USERNAME='$user'");
+         
+          oci_execute($stid);
+          
+  
+          while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
 
-    <p style="color: white;">Student profile page</p>
+          
+  
+    
+    
+    
+    ?>
+      </tbody>
+    </table>
 
-  </main>
-    <br> <br> <br> <br> <br> <br>
+   
+          
+    <br>
+    <table class="table">
+      <thead>
+        <tr align="center">
+        <th scope="col">Fine (if any)</th>
+     
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+      <?php
+      
+         
+          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
+          $stid2 = oci_parse($conn,"select round((sysdate -return_date)) from member join books using (std_id) where MEM_USERNAME='$user' AND sysdate>return_date");
+          oci_execute($stid2);
+  
+          while ($row = oci_fetch_array($stid2, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
+
+          
+  
+    
+    
+    
+    ?>
+      </tbody>
+    </table>
   <!-- ======= Footer ======= -->
  <footer id="footer">
     <div class="container">

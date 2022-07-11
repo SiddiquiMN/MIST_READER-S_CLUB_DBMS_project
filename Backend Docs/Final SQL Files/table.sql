@@ -168,6 +168,9 @@ CREATE TABLE ISSUE_DEMAND
 	Isbn_no varchar2(30) ,
 	Book_Title varchar2(80),
 	Primary key(Std_ID,Isbn_no),
+foreign key(Isbn_no) references Books(Isbn_no) on delete cascade,
+foreign key(Std_ID) references Student(Std_ID) on delete cascade
+
 
 );
 //new participant table, ager ta drop kore eita create koren

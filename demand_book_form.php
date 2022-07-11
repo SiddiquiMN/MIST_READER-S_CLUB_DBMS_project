@@ -7,6 +7,11 @@
   <body>
 
     <?php
+	session_start();
+
+
+
+	$user = $_SESSION['user'];
 $conn=oci_connect("MALIHA25","202014025","localhost/XE");
 if (!$conn) {
 	$e = oci_error();
@@ -15,14 +20,31 @@ if (!$conn) {
 
 if(isset($_POST['save']))
 {	 
-	$ID = $_POST['ID'];
-	$Name = $_POST['Name'];
-	$Dept = $_POST['Department'];
-	$Level = $_POST['Level'];
+	//$ID = $_POST['ID'];
+	$ID = oci_parse($conn, "Select STD_ID from member where mem_username='$user'");
+	oci_execute($ID);
+    oci_fetch($ID);
+	$std_id=oci_result($ID, 'STD_ID');
+
+	$name_query=oci_parse($conn, "Select STD_NAME from student join member using (std_id) where mem_username='$user'");
+	oci_execute($name_query);
+    oci_fetch($name_query);
+	$Name =oci_result($name_query, 'STD_NAME');
+
+	$dept_query=oci_parse($conn, "Select STD_DEPARTMENT from student join member using (std_id) where mem_username='$user'");
+	oci_execute($dept_query);
+    oci_fetch($dept_query);
+	$Dept =oci_result($dept_query, 'STD_DEPARTMENT');
+	
+	$level_query=oci_parse($conn, "Select STD_LEVEL from student join member using (std_id) where mem_username='$user'");
+	oci_execute($level_query);
+    oci_fetch($level_query);
+	$Level =oci_result($level_query, 'STD_LEVEL');
+	
 	$Title = $_POST['Book_Title'];
     $ISBN = $_POST['ISBN_No'];
 	$query = oci_parse($conn, "INSERT INTO ISSUE_DEMAND(Std_ID, Std_Name, Std_Department, Std_Level,Book_Title,Isbn_no)
-    VALUES ('$ID','$Name','$Dept','$Level','$Title','$ISBN')");
+    VALUES ('$std_id','$Name','$Dept','$Level','$Title','$ISBN')");
 	
 	$result = oci_execute($query);
 

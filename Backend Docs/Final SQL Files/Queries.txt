@@ -32,4 +32,9 @@ where return_date-due_date>0;
 select *from (expenditure join event_expense using (entry_number)) join event using (event_id)
 
 
+select title,issue_date,return_date from member join books using (std_id) where MEM_USERNAME='Muskan' //student profile books borrowed
+
+
+
+
 
