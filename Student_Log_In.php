@@ -1,47 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>LOGIN</title>
-</head>
 <body>
+
 <?php
-   
-   $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE");
-   if (!$conn) {
-       $e = oci_error();
-       trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-   }
+        session_start();
+        global $conn;
+        $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE");
+        if(isset($_POST['Save'])){
+            $user = $_POST['username'];
+            $pass = $_POST['password'];
+            $s = oci_parse($conn, "select Mem_Username,Mem_Password from Member where Mem_Username='$user' and Mem_Password='$pass'");       
+            oci_execute($s);
+            $row = oci_fetch_all($s, $res);
+            if($row){
+                    $_SESSION['user']=$user;
+                    $_SESSION['time_start_login'] = time();
+                    header("location: student_index.php");
+            }else{
 
-   
-    if (isset($_POST['Save']))
-    {
-        $un=$_POST['username'];
-        $pw=$_POST['password'];
-        $query = oci_parse($conn, "select Mem_Password from Member where username='$un'");
-        $result = oci_execute($query);
-
-
-        while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) 
-        {
-            echo "<tr align='center'>\n";
-            foreach ($row as $item) 
-            {
-                if ($pw==$row['password'])
-                {
-                    header("location:student_index.php");
-                    exit();
-                }
-                else
-                {
-                    echo "<script>alert('Invalid Password')</script>";
-                }      
+                echo "wrong password or username";
             }
-        
-            echo "<script>alert('Invalid Username')</script>";
-            echo "</tr>\n"; 
         }
-    }
+
+
+
 ?>
 </body>
 </html>
+
+
 
