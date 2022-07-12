@@ -24,12 +24,6 @@ if(isset($_POST['HIT']))
     }
 	/* ----->entry for Fund <------- */
 
-
-	/*$sql = oci_parse($conn, "Insert into student(std_id) values('100101')"); 
-	oci_execute($sql);
-	$sql1 =  oci_parse($conn,"Insert into member(std_ID,MEM_DOB) VALUES ('100101', to_date('".$DOB."', 'YYYY-MM-DD'))");
-	oci_execute($sql1);
-*/ 
 }
 ?>
   </body>
