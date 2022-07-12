@@ -63,10 +63,17 @@
           <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
          
           <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
+
           <li class="dropdown"><a href="#"><span>Expenditure & Fund</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a class="nav-link scrollto" href="Monthly_Expense.php">Monthly Expense</a></li>
-              <li><a href="Event_expense.php">Event Expense</a></li>
+
+              <li class="dropdown"><a href="#">Event Expense<i class="bi bi-chevron-down"></i></a>
+                <ul>
+                <li><a href="Event_expense.php">Book Reading Competition</a></li>
+                <li><a href="Inaugration_Ceremony.php">Inaugration Ceremony</a></li>
+                </ul>
+
               <li><a href="">View Fund</a></li>
               <li><a href="Expense_entry_form.php">=>Expense Entry<=</a></li>
               <li><a href="fund_entry.php">=>Fund Entry<=</a></li>

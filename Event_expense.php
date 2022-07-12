@@ -63,10 +63,17 @@
           <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
          
           <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
+
           <li class="dropdown"><a href="#"><span>Expenditure & Fund</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
             <li><a class="nav-link scrollto" href="Monthly_Expense.php">Monthly Expense</a></li>
-              <li><a href="Event_expense.php">Event Expense</a></li>
+
+              <li class="dropdown"><a href="#">Event Expense<i class="bi bi-chevron-down"></i></a>
+                <ul>
+                <li><a href="Event_expense.php">Book Reading Competition</a></li>
+                <li><a href="Inaugration_Ceremony.php">Inaugration Ceremony</a></li>
+                </ul>
+
               <li><a href="">View Fund</a></li>
               <li><a href="Expense_entry_form.php">=>Expense Entry<=</a></li>
               <li><a href="fund_entry.php">=>Fund Entry<=</a></li>
@@ -94,17 +101,19 @@
 
   <main id="main" style="margin-top: 157px;">
   <br>
-  <h2 style="color:black; text-align:center;">Event Expense Details</h2>
+  <h2 style="color:black; text-align:center;">Book Reading Competition(Event_ID: 202202) Expense Details(held on 06/02/2022)</h2>
   <br>
 
   <table class="table">
       <thead>
         <tr align="center">
           <th scope="col">ENTRY_NUMBER</th>  
-          <th scope="col">EVENT_ID</th> 
+          <th scope="col">ENTRY_AMOUNT</th> 
+          <th scope="col">ENTRY_DATE</th> 
+          <th scope="col">ENTRY_MONTH</th> 
+          <th scope="col">ENTRY_YEAR</th>  
           <th scope="col">TYPE</th> 
           <th scope="col">SPONSOR_NAME</th> 
-          <th scope="col">SPONSOR_AMOUNT</th>  
         </tr>
       </thead>
     <tbody class="table-group-divider">
@@ -123,7 +132,7 @@
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
           }
 
-          $stid = oci_parse($conn, 'SELECT * FROM Event_Expense');
+          $stid = oci_parse($conn, 'select ENTRY_NUMBER,ENTRY_AMOUNT,ENTRY_DATE,ENTRY_MONTH,ENTRY_YEAR,TYPE,SPONSOR_NAME from (expenditure join event_expense using (entry_number)) join event using (event_id) where event_id=202202');
           oci_execute($stid);
 
 
