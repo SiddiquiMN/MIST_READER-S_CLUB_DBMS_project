@@ -1,9 +1,7 @@
-<!--data insert connected with book_form.php page. 
- data stores into Books table of oracle-->
-
  <!-- admin end er page eta-->
+ <!-- database theke data view hosse ei page e-->
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -43,7 +41,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body style="background-image:url(./assets/img/bg_clr6.jpg); background-size:cover; background-repeat:no-repeat;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -86,6 +84,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
+      
     </div>
   </header><!-- End Header -->
 
@@ -94,58 +93,54 @@
  
 
   <main id="main" style="margin-top: 157px;">
-  <form method="post" action="book_form.php" style="padding: 50px;">
-    <div class="row">
-        <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Books information</h1>
-        <div class="col">
-            <input type="number" name="ISBN_no" class="form-control" placeholder="ISBN No." aria-label="ISBN No.">
-        </div>
-        <div class="col">
-            <input type="text" name="Title"class="form-control" placeholder="Book Title" aria-label="Book Title">
-        </div>
-    </div>
-    <br> <br>
+  <br>
+  <h2 style="color:black; text-align:center;">Event Expense Details</h2>
+  <br>
 
-    <div class="row">
-        <div class="col">
-            <input type="text" name="Genre"class="form-control" placeholder="Genre" aria-label="Genre">
-        </div>
-        <div class="col">
-            <input type="text" name="Publications"class="form-control" placeholder="Publications" aria-label="Publications">
-        </div>
-    </div>
-
-    <br> <br>
-    <div class="row">
+  <table class="table">
+      <thead>
+        <tr align="center">
+          <th scope="col">ENTRY_NUMBER</th>  
+          <th scope="col">EVENT_ID</th> 
+          <th scope="col">TYPE</th> 
+          <th scope="col">SPONSOR_NAME</th> 
+          <th scope="col">SPONSOR_AMOUNT</th>  
+        </tr>
+      </thead>
+    <tbody class="table-group-divider">
       
-        <div class="col">
-            <input type="text" name="Edition"class="form-control" placeholder="Edition" aria-label="Edition">
+        <?php
 
-        </div>
-        <div class="col">
-            <input type="text" name="Donated_By"class="form-control" placeholder="Donated By" aria-label="Donated By">
-        </div>
-    </div>
-
-    
-
-    <br><br>
-
-    <div class="row">
-      
-        
-    </div>
-
-    <br> <br>
-
-    <div class="row1" style="margin-bottom: 0px;">
-        <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
+          // Connects to the XE service (i.e. database) on the "localhost" machine
 
 
+          /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
+          /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
 
-        
+          $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE");
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
+
+          $stid = oci_parse($conn, 'SELECT * FROM Event_Expense');
+          oci_execute($stid);
+
+
+          while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
+
+        ?>
+
+
+    </tbody>
+  </table>
+  <br>
 
   </main>
 
