@@ -5,7 +5,7 @@
 <?php
         session_start();
         global $conn;
-        $conn=oci_connect("MALIHA25","202014025","localhost/XE");
+        $conn=oci_connect("09BIJOYA","09bijoya","localhost/XE");
         if(isset($_POST['Save'])){
             $user = $_POST['username'];
             $pass = $_POST['password'];

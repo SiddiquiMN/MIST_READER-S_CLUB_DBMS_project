@@ -69,13 +69,68 @@
     </div>
   </header><!-- End Header -->
 
-  
+  <!--available books start-->
+  <main id="main" style="margin-top: 157px;">
+  <br>
+  <h2 style="color:black; text-align:center;">Available Books Details</h2>
+  <br>
+
+  <table class="table">
+      <thead>
+        <tr align="center">
+          <th scope="col">ISBN_NO</th> 
+          <th scope="col">Book Title</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Edition</th>  
+          <th scope="col">GENRE</th>    
+        </tr>
+      </thead>
+    <tbody class="table-group-divider">
+      
+        <?php
+
+          // Connects to the XE service (i.e. database) on the "localhost" machine
+
+
+          /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
+          /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
+
+          $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE");
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
+
+          $stid = oci_parse($conn, 'SELECT ISBN_NO,Title,PUBLISHER,BOOK_EDITION,GENRE FROM Books WHERE Std_ID IS  NULL');
+          oci_execute($stid);
+
+
+          while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
+
+        ?>
+
+
+    </tbody>
+  </table>
+  <br>
+
+  </main>
+
+
+  <!--available books end-->
+
 
  
 
   <main id="main" style="margin-top: 157px;">
 
-    <p style="color: white;">Available Books page</p>
+    <!--<p style="color: white;">Available Books page</p>-->
 
     <h4 style="color: white; text-align:center;">If you have any demand regarding books please fill up the form attached below!</h4>
     <br>
