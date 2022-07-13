@@ -205,13 +205,25 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
                   echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
               }
               echo "</tr>\n";
+            
           }}}
+          
+   ECHO" </tbody>";
+   ECHO" </table>";
+               //****calculating and displaying total sum from selected event***** *//
+                $total_amount = oci_parse($conn,"select sum (ENTRY_AMOUNT) as sum from (expenditure join event_expense using (entry_number)) join event using (event_id) where event_id='$event_ID'");
+                oci_execute($total_amount);
+                 oci_fetch($total_amount);
+                 $tot=oci_result($total_amount, 'SUM');
+                 echo "<h6 style='color:black; text-align:center';><b>Total Expense: $tot</b></h4>";
+              
+             
+
 
         ?>
 
 
-    </tbody>
-  </table>
+
   <br>
 
   
