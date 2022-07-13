@@ -21,21 +21,22 @@ if (!$conn) {
 if(isset($_POST['save']))
 {	 
 	//$ID = $_POST['ID'];
+	 //**fetching student ID from slected member username** //
 	$ID = oci_parse($conn, "Select STD_ID from member where mem_username='$user'");
 	oci_execute($ID);
     oci_fetch($ID);
 	$std_id=oci_result($ID, 'STD_ID');
-
+ //**fetching student name from selected member username** //
 	$name_query=oci_parse($conn, "Select STD_NAME from student join member using (std_id) where mem_username='$user'");
 	oci_execute($name_query);
     oci_fetch($name_query);
 	$Name =oci_result($name_query, 'STD_NAME');
-
+ //**fetching student department from selected member username** //
 	$dept_query=oci_parse($conn, "Select STD_DEPARTMENT from student join member using (std_id) where mem_username='$user'");
 	oci_execute($dept_query);
     oci_fetch($dept_query);
 	$Dept =oci_result($dept_query, 'STD_DEPARTMENT');
-	
+	 //**fetching student level from selected member username** //
 	$level_query=oci_parse($conn, "Select STD_LEVEL from student join member using (std_id) where mem_username='$user'");
 	oci_execute($level_query);
     oci_fetch($level_query);

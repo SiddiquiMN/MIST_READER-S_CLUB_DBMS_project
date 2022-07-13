@@ -110,7 +110,7 @@
 
   /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
 
-        $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+        $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
         if (!$conn) {
             $e = oci_error();
             trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -134,11 +134,11 @@
 </table>
 
 <!--Drop down list theke month select korchi -->
-<h4 style="color: white; text-align:center;"><label for="cars">Select Month:</label> </h4>
+ <h4 style="color: white; text-align:center;"><label for="cars">Select Month:</label> </h4>
     <form action="" method="post" style="color: white; text-align:center;">
     <select name="Month" style="height: 50px;">
-    <option value="" disabled selected>Choose option</option>
-        <option value="January">January</option>
+    <option value="Month" disabled selected>Choose option</option>
+        <!-- <option value="January">January</option>
         <option value="February">February</option>
         <option value="March">March</option>
         <option value="April">April</option>
@@ -149,10 +149,21 @@
         <option value="September">September</option>
         <option value="October">October</option>
         <option value="November">November</option>
-        <option value="December">December</option>
+        <option value="December">December</option> -->
+       <?php  $conn = oci_connect("MALIHA25", "202014025", "localhost/XE"); 
+ $sql = 'SELECT Entry_Month FROM expenditure group by entry_month'; 
+ $stid = oci_parse($conn, $sql); 
+ $success = oci_execute($stid);
+ ?>
+ <?php 
+while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+ // $selected = $_POST['Month'];
+  //echo "<option style=color: white; text-color:white; value='{$row['ENTRY_MONTH']}'</option>";}
+  echo "<option value='{$row['ENTRY_MONTH']}'>{$row['ENTRY_MONTH']}</option>";}
+ ?>
     </select>
     <input style="height: 50px;" type="submit" name="submit" value="Submit">
-</form>
+</form> 
 
 <br><br>
     <!--Monthly Expense Detailed Table-->
@@ -183,7 +194,7 @@ echo "<h4 style='color:azure; text-align:center';><b>Event Expenses for the Mont
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -239,7 +250,7 @@ echo "<h4 style='color:azure; text-align:center';><b>Books Purchased for the Mon
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -294,7 +305,7 @@ echo "<h4 style='color:azure; text-align:center';><b>Other Expenses for the Mont
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);

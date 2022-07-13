@@ -68,11 +68,8 @@
             <ul>
             <li><a class="nav-link scrollto" href="Monthly_Expense.php">Monthly Expense</a></li>
 
-              <li class="dropdown"><a href="#">Event Expense<i class="bi bi-chevron-down"></i></a>
-                <ul>
-                <li><a href="Event_expense.php">Book Reading Competition</a></li>
-                <li><a href="Inaugration_Ceremony.php">Inaugration Ceremony</a></li>
-                </ul>
+            <li><a class="nav-link scrollto" href="Event_expense.php">Event Expense</a></li>
+                
 
               <li><a href="">View Fund</a></li>
               <li><a href="Expense_entry_form.php">=>Expense Entry<=</a></li>
@@ -100,10 +97,66 @@
  
 
   <main id="main" style="margin-top: 157px;">
-  <br>
-  <h2 style="color:black; text-align:center;">Book Reading Competition(Event_ID: 202202) Expense Details(held on 06/02/2022)</h2>
-  <br>
+  <!--Drop down list theke EVENT select korchi -->
+ <h4 style="color: black; text-align:center;"><label for="cars">Select Event:</label> </h4>
+    <form action="" method="post" style="color: white; text-align:center;">
+    <select name="Event" style="height: 50px;">
+    <option value="Event" disabled selected>Choose option</option>
+        <!-- <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option> -->
+       <?php  $conn = oci_connect("MALIHA25", "202014025", "localhost/XE"); 
+       //**fetching dropdown options from database** //
+ $sql = 'select event_name from event'; 
+ $stid = oci_parse($conn, $sql); 
+ $success = oci_execute($stid);
+ ?>
+ <?php 
+while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+ // $selected = $_POST['Month'];
+  //echo "<option style=color: white; text-color:white; value='{$row['ENTRY_MONTH']}'</option>";}
+  echo "<option value='{$row['EVENT_NAME']}'>{$row['EVENT_NAME']}</option>";}
+ ?>
+    </select>
+    <input style="height: 50px;" type="submit" name="submit" value="Submit">
+</form> 
 
+<br><br>
+  <br>
+  <?php    
+ if(isset($_POST['submit'])){
+  if(!empty($_POST['Event'])) {
+   
+$selected = $_POST['Event'];
+   //**fetching event ID from selected Event** //
+$ID = oci_parse($conn, "Select EVENT_ID from event where event_name='$selected'");
+oci_execute($ID);
+  oci_fetch($ID);
+$event_ID=oci_result($ID, 'EVENT_ID');
+ //**fetching event date from selected Event** //
+$Date = oci_parse($conn, "Select EVENT_Date from event where event_name='$selected'");
+oci_execute($Date);
+  oci_fetch($Date);
+$event_Date=oci_result($Date, 'EVENT_DATE');
+echo "<h4 style='color:black; text-align:center';><b>Expense Details for:  $selected</b></h4>";
+echo "<h4 style='color:black; text-align:center';><b>(Event ID : $event_ID)</b></h4>";
+echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)</b></h4>";
+
+
+
+}} ?> 
+  <!-- echo "<h2 style="color:black; text-align:center;">Book Reading Competition(Event_ID: 202202) Expense Details(held on 06/02/2022)</h2>"; -->
+  <br>
+  
   <table class="table">
       <thead>
         <tr align="center">
@@ -131,8 +184,18 @@
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
           }
-
-          $stid = oci_parse($conn, 'select ENTRY_NUMBER,ENTRY_AMOUNT,ENTRY_DATE,ENTRY_MONTH,ENTRY_YEAR,TYPE,SPONSOR_NAME from (expenditure join event_expense using (entry_number)) join event using (event_id) where event_id=202202');
+            
+          if(isset($_POST['submit'])){
+           if(!empty($_POST['Event'])) {
+            
+         $selected = $_POST['Event'];
+            //**fetching event ID from selected Event** //
+         $ID = oci_parse($conn, "Select EVENT_ID from event where event_name='$selected'");
+         oci_execute($ID);
+           oci_fetch($ID);
+           $event_ID=oci_result($ID, 'EVENT_ID');
+        
+          $stid = oci_parse($conn, "select ENTRY_NUMBER,ENTRY_AMOUNT,ENTRY_DATE,ENTRY_MONTH,ENTRY_YEAR,TYPE,SPONSOR_NAME from (expenditure join event_expense using (entry_number)) join event using (event_id) where event_id='$event_ID'");
           oci_execute($stid);
 
 
@@ -142,7 +205,7 @@
                   echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
               }
               echo "</tr>\n";
-          }
+          }}}
 
         ?>
 
@@ -150,6 +213,8 @@
     </tbody>
   </table>
   <br>
+
+  
 
   </main>
 
