@@ -114,7 +114,7 @@
         <option value="October">October</option>
         <option value="November">November</option>
         <option value="December">December</option> -->
-       <?php  $conn = oci_connect("MALIHA25", "202014025", "localhost/XE"); 
+       <?php  $conn = oci_connect("09BIJOYA", "09bijoya", "localhost/XE"); 
        //**fetching dropdown options from database** //
  $sql = 'select event_name from event'; 
  $stid = oci_parse($conn, $sql); 
