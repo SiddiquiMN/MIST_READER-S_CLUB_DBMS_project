@@ -1,8 +1,7 @@
-
  <!-- admin end er page eta-->
- <!-- Book status & Student fine view hosse ei page e-->
+ <!-- database theke data view hosse ei page e-->
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,6 +54,7 @@
         <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
     
+
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="admin_index.php">Admin</a></li>
@@ -91,149 +91,67 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
+      
     </div>
   </header><!-- End Header -->
 
-  <!--Book status table-->
+  
 
-<main id="main" style="margin-top: 157px;">
-  <h2 style="color:black; text-align:center;"><b>Book Status</b></h2>
+ 
+
+  <main id="main" style="margin-top: 157px;">
   <br>
+  <h2 style="color:black; text-align:center;">Inaugration Ceremony(Event_ID: 202201) Expense Details(held on 04/02/2022)</h2>
+  <br>
+
   <table class="table">
-    <thead>
-      <tr align="center">
-        <th scope="col">Student ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Department</th>
-        <th scope="col">Book</th>
-        <th scope="col">Issue Date</th>
-        <th scope="col">Return Date</th>
-      </tr>
-    </thead>
+      <thead>
+        <tr align="center">
+          <th scope="col">ENTRY_NUMBER</th>  
+          <th scope="col">ENTRY_AMOUNT</th> 
+          <th scope="col">ENTRY_DATE</th> 
+          <th scope="col">ENTRY_MONTH</th> 
+          <th scope="col">ENTRY_YEAR</th>  
+          <th scope="col">TYPE</th> 
+          <th scope="col">SPONSOR_NAME</th> 
+        </tr>
+      </thead>
     <tbody class="table-group-divider">
-    
-    
-    <?php
-
-  // Connects to the XE service (i.e. database) on the "localhost" machine
-
-
-  /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
-
-        $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE"); 
-        if (!$conn) {
-            $e = oci_error();
-            trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-        }
-
-        $stid = oci_parse($conn, 'select Std_ID as "Student ID", Std_Name as "Student Name", Std_Department as "Department", Title, Issue_Date,Return_Date
-        from Student join Books using (Std_ID)');
-        oci_execute($stid);
-
-
-        while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
-            echo "<tr align='center'>\n";
-            foreach ($row as $item) {
-                echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-            }
-            echo "</tr>\n";
-        }
-
-      ?>
-    
-    </tbody>
-</table>
-
-
-<br><br>
-
-<!-- Student with fine Details Table-->
-
-    <h2 style="color:black; text-align:center;"><b>Student with Fine</b></h2>
-    <br>
-    <table class="table">
-      <thead>
-        <tr align="center">
-          <th scope="col">Student ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Book</th>
-          <th scope="col">Fine</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-
-        <?php
-              $sti = oci_parse($conn, 'Select Std_id as "Student ID",Std_name as "Student Name",Title,round((sysdate-return_date)*5) as "Fine" from Books join Student using (Std_id)
-              where sysdate-return_date>0');
-              oci_execute($sti);
-
-
-              while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
-                  echo "<tr align='center'>\n";
-                  foreach ($row as $item) {
-                      echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-                  }
-                  echo "</tr>\n";
-              }
-
-            ?>
-      </tbody>
-    </table>
-    <br>
-
-    <br><br>
-
- <!-- Student with books they demanded table-->   
-
-    <h2 style="color:black; text-align:center;"><b>Issue Demanded by Students</b></h2>
-    <br>
-    <table class="table">
-      <thead>
-        <tr align="center">
-          <th scope="col">Student ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Department</th>
-          <th scope="col">Level</th>
-          <th scope="col">ISBN NO.</th>
-          <th scope="col">Book Title</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-
-        <?php
-              $sti = oci_parse($conn, 'Select * from ISSUE_DEMAND');
-              oci_execute($sti);
-
-
-              while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
-                  echo "<tr align='center'>\n";
-                  foreach ($row as $item) {
-                      echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
-                  }
-                  echo "</tr>\n";
-              }
-
-            ?>
-      </tbody>
-    </table>
-    <br>
-
-    <form method="post" action="grant_issue.php" style="padding:50px;">
       
-      <div class="row">
-            <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Grant Issue</h1>
-           
-            <div class="col">
-                <input type="Number" name="Std_ID"class="form-control" placeholder="Student ID" aria-label="Student_ID"><br>
-                <input type="Number" name="ISBN"class="form-control" placeholder="ISBN No." aria-label="ISBN No."><br>
-             
-            </div>
-            <div class="row1" style="margin-bottom: 0px;">
-            <button class="button1" name="SUBMIT"type="SUBMIT" class="btn btn-primary">Submit</button>
-        </div>
-        </div></form>
+        <?php
 
-</main>
+          // Connects to the XE service (i.e. database) on the "localhost" machine
+
+
+          /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
+          /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
+
+          $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE");
+          if (!$conn) {
+              $e = oci_error();
+              trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+          }
+
+          $stid = oci_parse($conn, 'select ENTRY_NUMBER,ENTRY_AMOUNT,ENTRY_DATE,ENTRY_MONTH,ENTRY_YEAR,TYPE,SPONSOR_NAME from (expenditure join event_expense using (entry_number)) join event using (event_id) where event_id=202201');
+          oci_execute($stid);
+
+
+          while ($row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS)) {
+              echo "<tr align='center'>\n";
+              foreach ($row as $item) {
+                  echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+              }
+              echo "</tr>\n";
+          }
+
+        ?>
+
+
+    </tbody>
+  </table>
+  <br>
+
+  </main>
 
   <!-- ======= Footer ======= -->
  <footer id="footer">
@@ -255,7 +173,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">MIST CSE DEPARTMENT</a>
+        Designed by <a href="#">MIST CSE DEPARTMENT</a>
       <!--</div>
     </div>
   </footer><!-- End Footer -->
