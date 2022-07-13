@@ -1,43 +1,7 @@
-
 <!--Admin Login page-->
 
-<?php 
-/*
-$usermsg="";
-$passmsg="";
-$msg="";
-
-$adusermsg="";
-$adpassmsg="";
-
-if(!empty($_REQUEST['adusermsg'])){
-  $adusermsg=$_REQUEST['adusermsg'];
-}
-
-if(!empty($_REQUEST['adpassmsg'])){
-  $adpassmsg=$_REQUEST['adpassmsg'];
-}
-
-if(!empty($_REQUEST['usermsg'])){
-  $usermsg=$_REQUEST['usermsg'];
-}
-
-if(!empty($_REQUEST['passmsg'])){
-  $passmsg=$_REQUEST['passmsg'];
-}
-
-if(!empty($_REQUEST['msg'])){
-  $msg=$_REQUEST['msg'];
-}
-*/
-
-?>
-
-
-
-
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -117,28 +81,27 @@ if(!empty($_REQUEST['msg'])){
 
   <main id="main" style="margin-top: 157px;">
 
-      <form action="loginadmin_server_pg.php" method="get"> 
+      <form action="Admin_login_connect.php" method="post"> 
         <div class="row2 shukor">
             <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Admin Login</h1>
             <div class="col" >
                 <p style="color: black; text-align: center;">Username</p>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                  <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username">
                   <br>
             </div>
-           <!-- <label style="color:red;">*<?php echo $adusermsg ?></label>-->
         
           
             <div class="col">
               <p style="color: black; text-align: center;">Password</p>
-                <input type="password" class="form-control" placeholder="password" aria-label="password">
+                <input type="password" name="password" class="form-control" placeholder="password" aria-label="password">
             </div>
-          <!--<label style="color:red;">*<?php echo $adpassmsg ?></label>-->
         </div>
           <br> <br>
       
           <div class="row1" style="margin-bottom: 0px;">
-              <button class="button1" type="submit" class="btn btn-primary">Sign in</button>
+              <button class="button1" name="Save" type="submit" class="btn btn-primary">Sign in</button>
           </div>
+          <br><br>
         </form> 
 
         
@@ -185,4 +148,4 @@ if(!empty($_REQUEST['msg'])){
 
 </body>
 
-</php>
+</html>

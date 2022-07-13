@@ -90,14 +90,12 @@
               <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username">
               <br>
         </div>
-         <!-- <label style="color:red;">*<?php echo $stuusermsg ?></label>-->
     
       
         <div class="col">
             <p style="color: black; text-align: center;">Password</p>
               <input type="password" name="password" class="form-control" placeholder="password" aria-label="password">
         </div>
-      <!--<label style="color:red;">*<?php echo $stupassmsg ?></label>-->
     </div>
       <br> <br>
   

@@ -106,7 +106,7 @@
         </ul>
          
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
-          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
+          <li><a class="nav-link scrollto" href="Admin.php">Log Out</a></li>
           <!--<li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="Admin.php">Admin Log In</a></li>

@@ -66,7 +66,7 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
           <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
           <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
           <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
-          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
+          <li><a class="nav-link scrollto" href="Student.php">Log Out</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
