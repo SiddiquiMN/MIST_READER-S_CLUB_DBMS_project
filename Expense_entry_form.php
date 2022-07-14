@@ -130,13 +130,18 @@
       <div class="row">
             <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Expense Entry</h1>
            
-            <div class="col">
+            <!-- <div class="col">
                 <input type="Number" name="Date"class="form-control" placeholder="Date" aria-label="Date"><br>
                 <input type="text" name="Month"class="form-control" placeholder="Month" aria-label="Month"><br>
                 <input type="Number" name="Year"class="form-control" placeholder="Year" aria-label="Year">
+            </div> -->
+            <div class="row">
+            <div class="col">
+                <input type="Date" name="Date2" class="form-control" placeholder="Amount" aria-label="Amount">
             </div>
         </div>
-        
+        </div>
+       
         <br>
         <div class="row">
             <div class="col">

@@ -206,7 +206,7 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
               }
               echo "</tr>\n";
             
-          }}}
+          }
           
    ECHO" </tbody>";
    ECHO" </table>";
@@ -217,7 +217,7 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
                  $tot=oci_result($total_amount, 'SUM');
                  echo "<h6 style='color:black; text-align:center';><b>Total Expense: $tot</b></h4>";
               
-             
+        }}
 
 
         ?>
