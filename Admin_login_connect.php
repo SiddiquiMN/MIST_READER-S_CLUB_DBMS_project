@@ -5,7 +5,11 @@
 <?php
         session_start();
         global $conn;
-        $conn=oci_connect("DBMS_PROJECT","1234","localhost/XE");
+<<<<<<< HEAD
+        $conn=oci_connect("MALIHA25","202014025","localhost/XE");
+=======
+        $conn=oci_connect("Nash31","201914031","localhost/XE");
+>>>>>>> 65038a935c81ec0e8ce07d7d96135446517ada98
         if(isset($_POST['Save'])){
             $a_user = $_POST['username'];
             $a_pass = $_POST['password'];

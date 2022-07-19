@@ -95,23 +95,23 @@
 
   <main id="main" style="margin-top: 157px;">
 
-  <form method="post" action="" style="padding: 50px;">
+  <form method="post" action="Volunteer_Reg_form.php" style="padding: 50px;">
     <div class="row">
         <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Volunteer Registration Form</h1>
         <div class="col">
-            <input type="number" class="form-control" placeholder="ID" aria-label="ID">
+            <input type="number" name="ID" class="form-control" placeholder="ID" aria-label="ID">
         </div>
         <div class="col">
-            <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+            <input type="text" name="Name" class="form-control" placeholder="Name" aria-label="Name">
         </div>
     </div>
     <br> <br>
     <div class="row">
         <div class="col">
-            <input type="text" class="form-control" placeholder="Department" aria-label="Department">
+            <input type="text" name="Department" class="form-control" placeholder="Department" aria-label="Department">
         </div>
         <div class="col">
-            <input type="text" class="form-control" placeholder="Level" aria-label="Level">
+            <input type="text" name="Level" class="form-control" placeholder="Level" aria-label="Level">
         </div>
     </div>
 
@@ -119,12 +119,12 @@
 
     <div class="row">
         <div class="col">
-            <input type="number" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
+            <input type="number" name="Phone" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
         </div>
         <div class="col">
             <!--<input type="text" class="form-control" placeholder="Event Duty" aria-label="Event Duty">-->
             <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-            <select class="form-select" id="autoSizingSelect" arial-placeholder="Event Duty" >
+            <select class="form-select" name="Event_Duty" id="autoSizingSelect" arial-placeholder="Event Duty" >
               <option value="1">Management</option>
               <option value="2">Organizing</option>
               <option value="3">Logistics</option>
@@ -136,7 +136,7 @@
     <br> <br>
 
     <div class="row1" style="margin-bottom: 0px;">
-        <button class="button1" type="submit" class="btn btn-primary">Submit</button>
+        <button class="button1" name="save" type="submit" class="btn btn-primary">Submit</button>
     </div>
 
   </form>
