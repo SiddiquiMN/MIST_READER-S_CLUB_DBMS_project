@@ -143,7 +143,7 @@ echo "<h4 style='color:azure; text-align:center';><b>Books Currently Borrowed:</
       <?php
       
          
-          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
+          $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);

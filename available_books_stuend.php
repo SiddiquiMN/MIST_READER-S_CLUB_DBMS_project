@@ -95,13 +95,13 @@
           /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
           /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
 
-          $conn = oci_connect("MALIHA25","202014025","localhost/XE");
+          $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE");
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
           }
 
-          $stid = oci_parse($conn, 'SELECT ISBN_NO,Title,PUBLISHER,BOOK_EDITION,GENRE FROM Books WHERE Std_ID IS  NULL');
+          $stid = oci_parse($conn, 'select * from Available_Books');
           oci_execute($stid);
 
 
