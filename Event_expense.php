@@ -78,7 +78,7 @@
         </ul>
          
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
-          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
+          <li><a class="nav-link scrollto" href="Admin.php">Log Out</a></li>
           <!--<li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="Admin.php">Admin Log In</a></li>
@@ -206,7 +206,7 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
               }
               echo "</tr>\n";
             
-          }}}
+          }
           
    ECHO" </tbody>";
    ECHO" </table>";
@@ -217,7 +217,7 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
                  $tot=oci_result($total_amount, 'SUM');
                  echo "<h6 style='color:black; text-align:center';><b>Total Expense: $tot</b></h4>";
               
-             
+        }}
 
 
         ?>
@@ -231,17 +231,10 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
   </main>
 
   <!-- ======= Footer ======= -->
- <footer id="footer">
+  <footer id="footer">
     <div class="container">
       <h3>MIST READERS CLUB</h3>
       <p>READ MORE BOOKS,WIDEN YOUR KNOWLEDGE</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
       <div class="copyright">
         &copy; Copyright <strong><span>MIST READERS CLUB</span></strong>. All Rights Reserved
       </div>

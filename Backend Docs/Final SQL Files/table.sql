@@ -199,5 +199,14 @@ TO
 issue_date
 
 
+/*Admin Table*/
+
+CREATE TABLE AdminInfo
+(
+	a_username VARCHAR2(40),
+	a_password VARCHAR2(40)
+);
+
+
 
 

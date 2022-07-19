@@ -106,7 +106,7 @@
         </ul>
          
          <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
-          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
+          <li><a class="nav-link scrollto" href="Admin.php">Log Out</a></li>
           <!--<li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="Admin.php">Admin Log In</a></li>
@@ -130,13 +130,18 @@
       <div class="row">
             <h1 style="text-align: center; color: black; margin-bottom: 34px !important;">Expense Entry</h1>
            
-            <div class="col">
+            <!-- <div class="col">
                 <input type="Number" name="Date"class="form-control" placeholder="Date" aria-label="Date"><br>
                 <input type="text" name="Month"class="form-control" placeholder="Month" aria-label="Month"><br>
                 <input type="Number" name="Year"class="form-control" placeholder="Year" aria-label="Year">
+            </div> -->
+            <div class="row">
+            <div class="col">
+                <input type="Date" name="Date2" class="form-control" placeholder="Amount" aria-label="Amount">
             </div>
         </div>
-        
+        </div>
+       
         <br>
         <div class="row">
             <div class="col">
@@ -246,17 +251,10 @@
   </main>
     <br> <br> <br> 
   <!-- ======= Footer ======= -->
- <footer id="footer">
+  <footer id="footer">
     <div class="container">
       <h3>MIST READERS CLUB</h3>
       <p>READ MORE BOOKS,WIDEN YOUR KNOWLEDGE</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
       <div class="copyright">
         &copy; Copyright <strong><span>MIST READERS CLUB</span></strong>. All Rights Reserved
       </div>

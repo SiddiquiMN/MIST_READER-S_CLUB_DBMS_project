@@ -88,52 +88,34 @@
             </div>
 
             <div class="p_member_list">
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
+                <div class="row" style="text-align: center;">
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/Panel Member img/maliha.jpg" alt="ssssss" style="float: none;"> <br><br>
+                        <p>Name: Maliha Zerin</p>
+                        <p>Department: CSE</p>
+                        <p>Designation: Head of Database Management System</p>
                     </div>
-                    <div class="col" style="margin-top: 70px; color:black">
-                        <p>Name: </p>
-                    <p>Department: </p>
-                    <p>Designation: </p>
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/Panel Member img/sowmik.jpg" alt="ssssss" style="float: none;"> <br><br>
+                        <p>Name: M N Alam Siddiqui</p>
+                        <p>Department: CSE</p>
+                        <p>Designation: Senior Executive Director(Logistics)</p>
                     </div>
                 </div>
                 <br><br>
 
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
+                <div class="row" style="text-align: center;">
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/Panel Member img/sajid1.jpg" alt="ssssss" style="float: none;"> <br><br>
+                        <p>Name: Sajid Hossain</p>
+                        <p>Department: CSE</p>
+                        <p>Designation: Senior Executive Director(Management)</p>
                     </div>
-                    <div class="col" style="margin-top: 70px; color:black">
-                        <p>Name: </p>
-                    <p>Department: </p>
-                    <p>Designation: </p>
-                    </div>
-                </div>
-
-                <br><br>
-
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                    </div>
-                    <div class="col" style="margin-top: 70px; color:black">
-                        <p>Name: </p>
-                    <p>Department: </p>
-                    <p>Designation: </p>
-                    </div>
-                </div>
-
-                <br><br>
-
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/team/team-1.jpg" alt="ssssss">
-                    </div>
-                    <div class="col" style="margin-top: 70px; color:black">
-                        <p>Name: </p>
-                    <p>Department: </p>
-                    <p>Designation: </p>
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/Panel Member img/bijoya.jpg" alt="ssssss" style="float: none;"> <br><br>
+                        <p>Name: Bijoya Ghosh</p>
+                        <p>Department: CSE</p>
+                        <p>Designation: Senior Executive Director(Public Relation)</p>
                     </div>
                 </div>
 
@@ -151,13 +133,6 @@
     <div class="container">
       <h3>MIST READERS CLUB</h3>
       <p>READ MORE BOOKS,WIDEN YOUR KNOWLEDGE</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
       <div class="copyright">
         &copy; Copyright <strong><span>MIST READERS CLUB</span></strong>. All Rights Reserved
       </div>

@@ -62,7 +62,7 @@
           <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
           <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
           <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
-          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
+          <li><a class="nav-link scrollto" href="Student.php">Log Out</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -129,13 +129,6 @@
     <div class="container">
       <h3>MIST READERS CLUB</h3>
       <p>READ MORE BOOKS,WIDEN YOUR KNOWLEDGE</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
       <div class="copyright">
         &copy; Copyright <strong><span>MIST READERS CLUB</span></strong>. All Rights Reserved
       </div>
@@ -145,7 +138,7 @@
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
         Designed by <a href="#">MIST CSE DEPARTMENT</a>
-      </div>
+      <!--</div>
     </div>
   </footer><!-- End Footer -->
 

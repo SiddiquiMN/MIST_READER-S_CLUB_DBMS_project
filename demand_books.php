@@ -66,7 +66,7 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
           <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
           <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
           <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
-          <li><a class="nav-link scrollto" href="#">Log Out</a></li>
+          <li><a class="nav-link scrollto" href="Student.php">Log Out</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -85,17 +85,10 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
   </main>
     <br> <br> 
   <!-- ======= Footer ======= -->
- <footer id="footer">
+  <footer id="footer">
     <div class="container">
       <h3>MIST READERS CLUB</h3>
       <p>READ MORE BOOKS,WIDEN YOUR KNOWLEDGE</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
       <div class="copyright">
         &copy; Copyright <strong><span>MIST READERS CLUB</span></strong>. All Rights Reserved
       </div>
@@ -107,7 +100,7 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
         Designed by <a href="#">MIST CSE DEPARTMENT</a>
       <!--</div>
     </div>
-  </footer><!-- End Footer -->
+  </footer> <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
