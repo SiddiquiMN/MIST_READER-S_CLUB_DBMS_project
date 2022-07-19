@@ -94,16 +94,8 @@
 
           /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
           /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
-
-<<<<<<< HEAD
-          $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE");
-=======
-<<<<<<< HEAD
-          $conn = oci_connect("Nash31","201914031","localhost/XE");
-=======
+          
           $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE");
->>>>>>> 2860bf7854f5a53a1114914927dd69cb66d8d44d
->>>>>>> f6fdbb860835f42717b4826c94ca372e3e2859aa
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
