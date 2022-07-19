@@ -18,18 +18,20 @@
                    $_SESSION['time_start_login'] = time();
                    header("location: admin_index.php");
              }else{
-
-                echo '<script type ="text/JavaScript">';  
-                echo 'confirm("Incorrect Username or Password")';  
-                echo '</script>';  
+                
                
-               
+               /*echo '<script type ="text/JavaScript">'; */ 
+                echo "<script> alert('Incorrect Username or Password');window.location='Admin.php'</script>"; 
+                /*echo '</script>';*/ 
+                /*header("location:Admin.php");*/
+                    
              }
         }
 
 
 
      ?>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
 

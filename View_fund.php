@@ -6,7 +6,7 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
 
  <!-- Studentend er page eta -->
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -46,7 +46,7 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
   ======================================================== -->
 </head>
 
-<body>
+<body style="background-image:url(./assets/img/bg_clr6.jpg); background-size:cover; background-repeat:no-repeat;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -61,16 +61,36 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
     
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="student_index.php">Welcome</a></li>
+          <li><a class="nav-link scrollto active" href="admin_index.php">Admin</a></li>
           
-          <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
-          <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
-          <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
-          <li><a class="nav-link scrollto" href="Student.php">Log Out</a></li>
+          <li><a class="nav-link scrollto" href="Books.php">Add Books</a></li>
+          <li><a class="nav-link scrollto " href="admin_book_inventory.php">Book Inventory</a></li>
+         
+          <li><a class="nav-link scrollto" href="Admin_Book_status.php">Book Status</a></li>
+
+          <li class="dropdown"><a href="#"><span>Expenditure & Fund</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a class="nav-link scrollto" href="Monthly_Expense.php">Monthly Expense</a></li>
+
+            <li><a class="nav-link scrollto" href="Event_expense.php">Event Expense</a></li>
+                
+
+              <li><a href="">View Fund</a></li>
+              <li><a href="Expense_entry_form.php">=>Expense Entry<=</a></li>
+              <li><a href="fund_entry.php">=>Fund Entry<=</a></li>
+            </ul>
+        </ul>
+         
+         <!-- <li><a class="nav-link scrollto" href="About.php">Issue Report</a></li> -->
+          <li><a class="nav-link scrollto" href="Admin.php">Log Out</a></li>
+          <!--<li class="dropdown"><a href="#"><span>Log In</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="Admin.php">Admin Log In</a></li>
+              <li><a href="Student.php">Student Log In</a></li>
+            </ul> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
     </div>
   </header><!-- End Header -->
 
@@ -80,7 +100,47 @@ isbn no age thekei thakte hbe database e...naila hbe naa -->
 
   <main id="main" style="margin-top: 157px;">
 
-    
+  <h2 style="color:black; text-align:center;"><b>Fund view</b></h2>
+    <br>
+    <table class="table">
+      <thead>
+        <tr align="center">
+          <th scope="col">Fund ID</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Source</th>
+          <th scope="col">Transaction Date</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+
+      
+
+        <?php
+
+
+                $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE");
+                if (!$conn) {
+                    $e = oci_error();
+                    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+                }
+
+
+              $sti = oci_parse($conn, 'Select * from Fund');
+              oci_execute($sti);
+
+
+              while ($row = oci_fetch_array($sti, OCI_ASSOC+OCI_RETURN_NULLS)) {
+                  echo "<tr align='center'>\n";
+                  foreach ($row as $item) {
+                      echo "    <td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                  }
+                  echo "</tr>\n";
+              }
+
+            ?>
+      </tbody>
+    </table>
+    <br>
 
   </main>
     <br> <br> 

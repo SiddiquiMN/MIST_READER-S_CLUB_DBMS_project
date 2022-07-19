@@ -19,7 +19,7 @@ if(isset($_POST['HIT']))
 	values (Fund_Sequence.NEXTVAL,'$Amount','$Source', to_date('".$TDate."','YYYY-MM-DD'))");
 	$result = oci_execute($query);
     if ($result) {
-		echo "Data added Successfully!";
+		echo "<script> alert('Data Added Succesful');window.location='fund_entry.php'</script>"; 
 		exit();
     }
 	/* ----->entry for Fund <------- */
