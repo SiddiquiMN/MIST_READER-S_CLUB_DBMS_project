@@ -59,7 +59,7 @@
           <li><a class="nav-link scrollto active" href="student_index.php">Welcome</a></li>
           
           <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
-          <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
+          
           <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
           <li><a class="nav-link scrollto" href="Student.php">Log Out</a></li>
         </ul>
@@ -100,7 +100,7 @@ echo "<h4 style='color:azure; text-align:center';><b>Books Currently Borrowed:</
       <?php
       
          
-          $conn = oci_connect("09BIJOYA","09bijoya","localhost/XE"); 
+          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -143,7 +143,7 @@ echo "<h4 style='color:azure; text-align:center';><b>Books Currently Borrowed:</
       <?php
       
          
-          $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
+          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);

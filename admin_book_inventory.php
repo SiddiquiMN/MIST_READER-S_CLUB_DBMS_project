@@ -69,7 +69,7 @@
             <li><a class="nav-link scrollto" href="Monthly_Expense.php">Monthly Expense</a></li>
             <li><a class="nav-link scrollto" href="Event_expense.php">Event Expense</a></li>
                 
-              <li><a href="">View Fund</a></li>
+              <li><a href="View_fund.php">View Fund</a></li>
               <li><a href="Expense_entry_form.php">=>Expense Entry<=</a></li>
               <li><a href="fund_entry.php">=>Fund Entry<=</a></li>
             </ul>
@@ -115,7 +115,7 @@
           /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
           /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
 
-          $conn = oci_connect("Maliha25","202014025","localhost/XE");
+          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE");
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);

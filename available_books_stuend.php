@@ -59,7 +59,7 @@
           <li><a class="nav-link scrollto active" href="student_index.php">Welcome</a></li>
           
           <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
-          <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
+          
           <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
           <li><a class="nav-link scrollto" href="Student.php">Log Out</a></li>
         </ul>
@@ -95,7 +95,7 @@
           /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
           /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
 
-          $conn = oci_connect("MALIHA25","202014025","localhost/XE");
+          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE");
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -118,28 +118,18 @@
 
     </tbody>
   </table>
-  <br>
-
-  </main>
+  <br><br><br>
 
 
-  <!--available books end-->
-
-
- 
-
-  <main id="main" style="margin-top: 157px;">
-
-    <!--<p style="color: white;">Available Books page</p>-->
-
-    <h4 style="color: white; text-align:center;">If you have any demand regarding books please fill up the form attached below!</h4>
+  <h4 style="color: black; text-align:center;">If you have any demand regarding books please fill up the form attached below!</h4>
     <br>
     
     <form method="post" action="demand_book_form.php" style="padding: 50px;">
       
       <div class="row">
             <h5 style="text-align: center; color: black; margin-bottom: 34px !important;">***All the boxes should be filled up correctly***</h5>
-            
+      </div>  
+
         <div class="row">
             <div class="col">
                 <input type="text" name="Book_Title" class="form-control" placeholder="Name of the Book" aria-label="Book_Title">
@@ -150,16 +140,25 @@
             </div>
         </div>   
 
-        <br> <br> <br>
+        <br><br>
 
-        <div class="row1" style="margin-bottom: 0px;">
-        <br> <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
-        </div>
+          <div class="row1" style="margin-bottom: 0px;">
+              <br> <button class="button1" name="save"type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        
        
 
     </form>  
 
   </main>
+
+
+  <!--available books end-->
+
+
+ 
+
+  
     <br> <br> <br> <br> <br> <br>
   <!-- ======= Footer ======= -->
   <footer id="footer">

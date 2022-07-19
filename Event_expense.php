@@ -71,7 +71,7 @@
             <li><a class="nav-link scrollto" href="Event_expense.php">Event Expense</a></li>
                 
 
-              <li><a href="">View Fund</a></li>
+              <li><a href="View_fund.php">View Fund</a></li>
               <li><a href="Expense_entry_form.php">=>Expense Entry<=</a></li>
               <li><a href="fund_entry.php">=>Fund Entry<=</a></li>
             </ul>
@@ -114,7 +114,7 @@
         <option value="October">October</option>
         <option value="November">November</option>
         <option value="December">December</option> -->
-       <?php  $conn = oci_connect("MALIHA25", "202014025", "localhost/XE"); 
+       <?php  $conn = oci_connect("DBMS_PROJECT", "1234", "localhost/XE"); 
        //**fetching dropdown options from database** //
  $sql = 'select event_name from event'; 
  $stid = oci_parse($conn, $sql); 
@@ -179,7 +179,7 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
           /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
           /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
 
-          $conn = oci_connect("MALIHA25","202014025","localhost/XE");
+          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE");
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
