@@ -12,7 +12,7 @@
 
 
 	$user = $_SESSION['user'];
-$conn=oci_connect("MALIHA25","202014025","localhost/XE");
+$conn=oci_connect("Nash31","201914031","localhost/XE");
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
