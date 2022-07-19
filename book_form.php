@@ -2,7 +2,7 @@
  data stores into Books table of oracle-->
 
 <?php
-$conn=oci_connect("Nash31","201914031","localhost/XE");
+$conn=oci_connect("DBMS_PROJECT","1234","localhost/XE");
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -26,11 +26,11 @@ if(isset($_POST['save']))
 	$result = oci_execute($query);
 
 	if ($result) {
-				echo "Data added Successfully !";
+		echo "<script> alert('Data Added Succesful');window.location='Books.php'</script>";
 				exit();
 	}
 	else{
-		echo "Error !";
+		echo "<script> alert('Sorry! Error-404');window.location='Books.php'</script>";
 				exit();
 	}
 }

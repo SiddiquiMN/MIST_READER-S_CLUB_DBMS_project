@@ -3,7 +3,9 @@
   <body>
 
     <?php
+
 $conn=oci_connect("Maliha25","202014025","localhost/XE");
+
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -61,11 +63,11 @@ if(isset($_POST['Save']))
    
 
 	if ($result) {
-				echo "Data added Successfully !";
+		echo "<script> alert('Data Added Succesful');window.location='Participate Reg.php'</script>";
 				exit();
 	}
 	else{
-		echo "Error !";
+		echo "<script> alert('Sorry! Error-404');window.location='fund_entry.php'</script>";
 				exit();
 	}
 }

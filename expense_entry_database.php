@@ -3,7 +3,11 @@
   <body>
 
     <?php
+<<<<<<< HEAD
 $conn=oci_connect("MALIHA25","202014025","localhost/XE");
+=======
+$conn=oci_connect("DBMS_PROJECT","1234","localhost/XE");
+>>>>>>> 39b09becb7eccdbdbbafbab152a1616d8688afcb
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -70,7 +74,7 @@ if(isset($_POST['HIT']))
 	
 	$result1 = oci_execute($query1);
 	if ($result && $result1) {
-		echo "Data added Successfully Result1!";
+		echo "<script> alert('Data Added Succesful');window.location='Expense_entry_form.php'</script>";
 		exit();
 
 			/* ----->entry for event_expense <------- */
@@ -84,7 +88,7 @@ if(isset($_POST['HIT']))
 	values (Expense_Sequence.CURRVAL,'$Book_Quantity')");
 	$result2 = oci_execute($query2);
 	if ($result && $result2) {
-		echo "Data added Successfully Result2!";
+		echo "<script> alert('Data Added Succesful');window.location='Expense_entry_form.php'</script>";
 		exit();
 			/* ----->entry for books <------- */
 }
@@ -99,7 +103,7 @@ if($Category!=NULL)
   $result3 = oci_execute($query3);
   
   if ($result3) {
-	echo "Data added Successfully Result3!";
+	echo "<script> alert('Data Added Succesful');window.location='Expense_entry_form.php'</script>";
 	exit();
 
 		/* ----->entry for others <------- */
