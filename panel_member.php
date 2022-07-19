@@ -88,49 +88,31 @@
             </div>
 
             <div class="p_member_list">
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/Panel Member img/maliha.jpg" alt="ssssss">
-                    </div>
-                    <div class="col" style="margin-top: 70px; color:black">
+                <div class="row" style="text-align: center;">
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/Panel Member img/maliha.jpg" alt="ssssss" style="float: none;"> <br><br>
                         <p>Name: Maliha Zerin</p>
-                    <p>Department: CSE</p>
-                    <p>Designation: Head of Database Management System</p>
+                        <p>Department: CSE</p>
+                        <p>Designation: Head of Database Management System</p>
                     </div>
-                </div>
-                <br><br>
-
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/Panel Member img/sowmik.jpg" alt="ssssss">
-                    </div>
-                    <div class="col" style="margin-top: 70px; color:black">
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/Panel Member img/sowmik.jpg" alt="ssssss" style="float: none;"> <br><br>
                         <p>Name: M N Alam Siddiqui</p>
                         <p>Department: CSE</p>
                         <p>Designation: Senior Executive Director(Logistics)</p>
                     </div>
                 </div>
-
                 <br><br>
 
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/Panel Member img/sajid1.jpg" alt="ssssss">
-                    </div>
-                    <div class="col" style="margin-top: 70px; color:black">
+                <div class="row" style="text-align: center;">
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/Panel Member img/sajid1.jpg" alt="ssssss" style="float: none;"> <br><br>
                         <p>Name: Sajid Hossain</p>
                         <p>Department: CSE</p>
                         <p>Designation: Senior Executive Director(Management)</p>
                     </div>
-                </div>
-
-                <br><br>
-
-                <div class="row">
-                    <div class="col">
-                        <img src="assets/img/Panel Member img/bijoya.jpg" alt="ssssss">
-                    </div>
-                    <div class="col" style="margin-top: 70px; color:black">
+                    <div class="col" style="color: black; ">
+                        <img src="assets/img/Panel Member img/bijoya.jpg" alt="ssssss" style="float: none;"> <br><br>
                         <p>Name: Bijoya Ghosh</p>
                         <p>Department: CSE</p>
                         <p>Designation: Senior Executive Director(Public Relation)</p>

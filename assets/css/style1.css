@@ -63,7 +63,7 @@ body{
 
 .p_member_list img{
   height: 250px;
-  float: right;
+  /*float: none;*/
 }
 
 /*Gallary photo case*/
