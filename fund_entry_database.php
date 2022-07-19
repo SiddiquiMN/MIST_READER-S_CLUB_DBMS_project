@@ -3,7 +3,7 @@
   <body>
 
     <?php
-$conn=oci_connect("DBMS_PROJECT","1234","localhost/XE");
+$conn=oci_connect("Nash31","201914031","localhost/XE");
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -19,7 +19,7 @@ if(isset($_POST['HIT']))
 	values (Fund_Sequence.NEXTVAL,'$Amount','$Source', to_date('".$TDate."','YYYY-MM-DD'))");
 	$result = oci_execute($query);
     if ($result) {
-		echo "Data added Successfully!";
+		echo "<script> alert('Data Added Succesful');window.location='fund_entry.php'</script>"; 
 		exit();
     }
 	/* ----->entry for Fund <------- */

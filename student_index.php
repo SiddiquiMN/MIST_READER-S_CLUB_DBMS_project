@@ -60,7 +60,7 @@
           <li><a class="nav-link scrollto active" href="student_index.php">Welcome</a></li>
           
           <li><a class="nav-link scrollto" href="student_profile.php">Profile</a></li>
-          <li><a class="nav-link scrollto " href="demand_books.php">Demand Books</a></li>
+          
           <li><a class="nav-link scrollto" href="available_books_stuend.php">Available Books</a></li>
           <li><a class="nav-link scrollto" href="Student.php">Log Out</a></li>
         </ul>
