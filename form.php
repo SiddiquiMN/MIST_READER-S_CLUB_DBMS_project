@@ -3,11 +3,7 @@
   <body>
 
     <?php
-<<<<<<< HEAD
 $conn=oci_connect("MALIHA25","202014025","localhost/XE");
-=======
-$conn=oci_connect("NASH31","201914031","localhost/XE");
->>>>>>> 65038a935c81ec0e8ce07d7d96135446517ada98
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);

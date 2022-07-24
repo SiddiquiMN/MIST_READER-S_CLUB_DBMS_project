@@ -110,7 +110,7 @@ CREATE TABLE Expenditure
  
 Entry_Amount NUMBER,
 Entry_Date NUMBER(2,0),
-Entry_Month VARCHAR(8),
+Entry_Month VARCHAR(50),
 Entry_Year NUMBER(4,0)
 );
 
