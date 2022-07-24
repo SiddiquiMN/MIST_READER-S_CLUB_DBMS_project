@@ -135,7 +135,8 @@ if(isset($_POST['Save']))
                                 $fileNameNew = $filename.".".$fileActualExt;
                                  $fileDestination = 'Uploads/'.$fileNameNew;
                                  move_uploaded_file($fileTmpname,$fileDestination);
-                                 echo "Done";
+                                 echo "<script> alert('Data Added Successful');window.location='Participate Reg.php'</script>";
+                                 exit();
 
                           }
                           else {echo "size wrong";}

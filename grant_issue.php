@@ -3,11 +3,9 @@
   <body>
 
     <?php
-<<<<<<< HEAD
-$conn=oci_connect("Nash31","201914031","localhost/XE");
-=======
-$conn=oci_connect("DBMS_PROJECT","1234","localhost/XE");
->>>>>>> 2860bf7854f5a53a1114914927dd69cb66d8d44d
+
+$conn=oci_connect("MALIHA25","202014025","localhost/XE");
+
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -30,11 +28,12 @@ if(isset($_POST['SUBMIT']))
 	$result4= oci_execute($query4);
 
 	if ($result &&$result2 &&$result3 && $result4) {
-				echo "Data added Successfully !";
-				exit();
+		echo "<script> alert('Data Added Succesful');window.location='Admin_Book_status.php'</script>";
+		exit();
 	}
 	else{
-		echo "Error !";
+		//echo "<script> alert('Sorry! Error-404');window.location='Admin_Book_status.php'</script>";
+		echo "ERROR";
 				exit();
 	}
 }

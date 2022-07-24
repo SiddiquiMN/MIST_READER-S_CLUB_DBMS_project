@@ -110,7 +110,7 @@
 
   /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
 
-        $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+        $conn = oci_connect("MALIHA25","202014025","localhost/XE"); 
         if (!$conn) {
             $e = oci_error();
             trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -150,7 +150,7 @@
         <option value="October">October</option>
         <option value="November">November</option>
         <option value="December">December</option> -->
-       <?php  $conn = oci_connect("DBMS_PROJECT", "1234", "localhost/XE"); 
+       <?php  $conn = oci_connect("MALIHA25", "202014025", "localhost/XE"); 
  $sql = 'SELECT Entry_Month FROM expenditure group by entry_month'; 
  $stid = oci_parse($conn, $sql); 
  $success = oci_execute($stid);
@@ -194,7 +194,7 @@ echo "<h4 style='color:black; text-align:center';><b>Event Expenses for the Mont
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("MALIHA25", "202014025", "localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -250,7 +250,7 @@ echo "<h4 style='color:black; text-align:center';><b>Books Purchased for the Mon
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("MALIHA25", "202014025", "localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -305,7 +305,7 @@ echo "<h4 style='color:black; text-align:center';><b>Other Expenses for the Mont
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("MALIHA25", "202014025", "localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);

@@ -3,11 +3,10 @@
   <body>
 
     <?php
-<<<<<<< HEAD
+
 $conn=oci_connect("MALIHA25","202014025","localhost/XE");
-=======
-$conn=oci_connect("DBMS_PROJECT","1234","localhost/XE");
->>>>>>> 39b09becb7eccdbdbbafbab152a1616d8688afcb
+
+
 if (!$conn) {
 	$e = oci_error();
 	trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);

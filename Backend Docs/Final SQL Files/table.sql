@@ -56,6 +56,7 @@ FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID)  ON DELETE CASCADE
 
 );
 
+
 CREATE TABLE Event_Manage
 (Event_ID NUMBER(6,0),
  Std_ID VARCHAR2(20),
@@ -68,7 +69,7 @@ CREATE TABLE Event_Participant
 (Event_ID NUMBER(6,0),
  Std_ID VARCHAR2(20),
 FOREIGN KEY(Event_ID) REFERENCES Event(Event_ID) ON DELETE CASCADE,
-FOREIGN KEY(Std_ID) REFERENCES Student(Std_ID) ON DELETE CASCADE,
+FOREIGN KEY(Std_ID) REFERENCES Participant(P_ID) ON DELETE CASCADE,
 Participated_Segment VARCHAR(30),
 Position Number
 
@@ -110,7 +111,7 @@ CREATE TABLE Expenditure
  
 Entry_Amount NUMBER,
 Entry_Date NUMBER(2,0),
-Entry_Month VARCHAR(8),
+Entry_Month VARCHAR(50),
 Entry_Year NUMBER(4,0)
 );
 
