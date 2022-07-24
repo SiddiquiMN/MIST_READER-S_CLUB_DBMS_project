@@ -121,17 +121,21 @@
         <div class="col">
             <input type="number" name="Phone" class="form-control" placeholder="Phone Number" aria-label="Phone Number">
         </div>
-        <div class="col">
+        <!-- <div class="col">
             <!--<input type="text" class="form-control" placeholder="Event Duty" aria-label="Event Duty">-->
-            <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+            <!-- <label class="visually-hidden" for="autoSizingSelect">Preference</label>
             <select class="form-select" name="Event_Duty" id="autoSizingSelect" arial-placeholder="Event Duty" >
-              <option value="1">Management</option>
-              <option value="2">Organizing</option>
-              <option value="3">Logistics</option>
-              <option value="4">Food & Others</option>
+              <option value="Management">Management</option>
+              <option value="Organizing">Organizing</option>
+              <option value="Logistics">Logistics</option>
+              <option value="Food & Others">Food & Others</option>
             </select>
+        </div>  -->
+        <div class="col">
+            <input type="text" name="Segment" class="form-control" placeholder="Segment" aria-label="Phone Number">
         </div>
-    </div>
+</div>
+        
 
     <br> <br>
 

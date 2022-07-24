@@ -108,20 +108,22 @@
           <div class="col">
               <input type="text" name="University_Name" class="form-control" placeholder="University Name" aria-label="University Name">
           </div>
+
+          
       </div>
 
       <br> <br>
       <div class="row">
-          <div class="col">
+          <!-- <div class="col">
             <p style="color: black; text-align: center;"><b>Student Image</b></p>
-              <input type="file" name="Student_image" class="form-control" placeholder="Student image" aria-label="Student image">
+              <input type="file" name="file" class="form-control" placeholder="Student image" aria-label="Student image">
               <div class="invalid-feedback">Example invalid form file feedback</div>
-          </div>  
-          <div class="col">
+          </div>   -->
+          <!-- <div class="col">
             <p style="color:black; text-align: center;"><b>University ID card Image</b></p>  
             <input type="file" name="Univesity_ID_card_Image" class="form-control" placeholder="Univesity ID card Image" aria-label="University ID card Image">
             <div class="invalid-feedback">Example invalid form file feedback</div>
-          </div>
+          </div> -->
         </div>
 
         <br> <br>

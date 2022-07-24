@@ -101,7 +101,7 @@
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
           }
 
-          $stid = oci_parse($conn, 'select * from Available_Books');
+          $stid = oci_parse($conn, 'select *from Available_Books');
           oci_execute($stid);
 
 

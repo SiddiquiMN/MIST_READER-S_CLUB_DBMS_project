@@ -114,6 +114,9 @@
             <input type="text" name="Genre"class="form-control" placeholder="Genre" aria-label="Genre">
         </div>
         <div class="col">
+            <input type="text" name="Author"class="form-control" placeholder="Author" aria-label="Genre">
+        </div>
+        <div class="col">
             <input type="text" name="Publications"class="form-control" placeholder="Publications" aria-label="Publications">
         </div>
     </div>

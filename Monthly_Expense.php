@@ -194,7 +194,7 @@ echo "<h4 style='color:black; text-align:center';><b>Event Expenses for the Mont
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("DBMS_PROJECT", "1234", "localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -250,7 +250,7 @@ echo "<h4 style='color:black; text-align:center';><b>Books Purchased for the Mon
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("DBMS_PROJECT", "1234", "localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -305,7 +305,7 @@ echo "<h4 style='color:black; text-align:center';><b>Other Expenses for the Mont
         if(!empty($_POST['Month'])) {
           $selected = $_POST['Month'];
          
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE"); 
+          $conn = oci_connect("DBMS_PROJECT", "1234", "localhost/XE"); 
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);

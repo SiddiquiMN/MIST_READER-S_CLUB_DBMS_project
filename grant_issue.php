@@ -27,7 +27,7 @@ if(isset($_POST['SUBMIT']))
 
 	if ($result &&$result2 &&$result3 && $result4) {
 		echo "<script> alert('Data Added Succesful');window.location='Admin_Book_status.php'</script>";
-				exit();
+		exit();
 	}
 	else{
 		echo "<script> alert('Sorry! Error-404');window.location='Admin_Book_status.php'</script>";

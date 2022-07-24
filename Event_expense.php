@@ -180,7 +180,7 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
           /* PHP CONNECT ER SOMOY ORACLE ER WORKSTATION E LOG IN ER JNNE JE USER R PASSWORD DEI SETA EKHANE DIBO. ONNO KONO USER, PASS NA */
           /* EX:  amr workstation user: DBMS_PROJECT  &  pass: 1234. */
 
-          $conn = oci_connect("DBMS_PROJECT","1234","localhost/XE");
+          $conn = oci_connect("DBMS_PROJECT", "1234", "localhost/XE");
           if (!$conn) {
               $e = oci_error();
               trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
@@ -210,7 +210,7 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
           }
           
    ECHO" </tbody>";
-   ECHO" </table>";
+   
                //****calculating and displaying total sum from selected event***** *//
                 $total_amount = oci_parse($conn,"select sum (ENTRY_AMOUNT) as sum from (expenditure join event_expense using (entry_number)) join event using (event_id) where event_id='$event_ID'");
                 oci_execute($total_amount);
@@ -220,7 +220,7 @@ echo "<h4 style='color:black; text-align:center';><b>(Event Date : $event_Date)<
               
         }}
 
-
+        ECHO" </table>";
         ?>
 
 
